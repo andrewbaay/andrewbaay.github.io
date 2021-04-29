@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sears's sucky shaders</title><link>/</link><description>Recent content on Sears's sucky shaders</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 29 Apr 2021 15:43:47 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Source Engine Cascaded Shadow Implementation</title><link>/posts/post0/</link><pubDate>Thu, 29 Apr 2021 15:43:47 +0800</pubDate><guid>/posts/post0/</guid><description>//========================================================================================== // Give shader CSM data //========================================================================================== void AGS_SetupCascadedShadowPixelShaderConstants(CBaseVSShader* pShader, IShaderDynamicAPI* pShaderAPI, int constantRegister) { // This must be consistent with what we have on ags_globallight_ps2_3_x.h! // CSM + Snapshot takes 13 constant registers after initial int initial = constantRegister; CSMData_t csmData = AGS_GetRenderState()-&amp;gt;csmData; CSMStaticData_t staticShadowData = AGS_GetRenderState()-&amp;gt;csmStaticData; ITexture* pCascadedDepthTexture = NULL; ITexture* pStaticDepthTexture = NULL; ITexture* pCloudsTexture = NULL; pCascadedDepthTexture = csmData.m_depthTexture; pStaticDepthTexture = staticShadowData.m_depthTexture; // Light forward vector + cloud shadow trigger on alpha Vector csmFwd = AGS_GetRenderState()-&amp;gt;m_vSunPos; pShaderAPI-&amp;gt;SetPixelShaderConstant(initial, csmFwd.</description><content>&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-cpp" data-lang="cpp">
+&lt;span style="color:#75715e">//==========================================================================================
+&lt;/span>&lt;span style="color:#75715e">// Give shader CSM data
+&lt;/span>&lt;span style="color:#75715e">//==========================================================================================
+&lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">AGS_SetupCascadedShadowPixelShaderConstants&lt;/span>(CBaseVSShader&lt;span style="color:#f92672">*&lt;/span> pShader, IShaderDynamicAPI&lt;span style="color:#f92672">*&lt;/span> pShaderAPI, &lt;span style="color:#66d9ef">int&lt;/span> constantRegister)
+{
+&lt;span style="color:#75715e">// This must be consistent with what we have on ags_globallight_ps2_3_x.h!
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#75715e">// CSM + Snapshot takes 13 constant registers after initial
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">int&lt;/span> initial &lt;span style="color:#f92672">=&lt;/span> constantRegister;
+CSMData_t csmData &lt;span style="color:#f92672">=&lt;/span> AGS_GetRenderState()&lt;span style="color:#f92672">-&amp;gt;&lt;/span>csmData;
+CSMStaticData_t staticShadowData &lt;span style="color:#f92672">=&lt;/span> AGS_GetRenderState()&lt;span style="color:#f92672">-&amp;gt;&lt;/span>csmStaticData;
+ITexture&lt;span style="color:#f92672">*&lt;/span> pCascadedDepthTexture &lt;span style="color:#f92672">=&lt;/span> NULL;
+ITexture&lt;span style="color:#f92672">*&lt;/span> pStaticDepthTexture &lt;span style="color:#f92672">=&lt;/span> NULL;
+ITexture&lt;span style="color:#f92672">*&lt;/span> pCloudsTexture &lt;span style="color:#f92672">=&lt;/span> NULL;
+pCascadedDepthTexture &lt;span style="color:#f92672">=&lt;/span> csmData.m_depthTexture;
+pStaticDepthTexture &lt;span style="color:#f92672">=&lt;/span> staticShadowData.m_depthTexture;
+&lt;span style="color:#75715e">// Light forward vector + cloud shadow trigger on alpha
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> Vector csmFwd &lt;span style="color:#f92672">=&lt;/span> AGS_GetRenderState()&lt;span style="color:#f92672">-&amp;gt;&lt;/span>m_vSunPos;
+pShaderAPI&lt;span style="color:#f92672">-&amp;gt;&lt;/span>SetPixelShaderConstant(initial, csmFwd.Base());
+&lt;span style="color:#75715e">// Light Color
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> Vector4D csmLight &lt;span style="color:#f92672">=&lt;/span> AGS_GetRenderState()&lt;span style="color:#f92672">-&amp;gt;&lt;/span>m_vSunColor;
+pShaderAPI&lt;span style="color:#f92672">-&amp;gt;&lt;/span>SetPixelShaderConstant(initial &lt;span style="color:#f92672">+&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>, csmLight.Base());
+&lt;span style="color:#66d9ef">if&lt;/span> (pCascadedDepthTexture)
+{
+&lt;span style="color:#75715e">// Cascaded Depth
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> pCascadedDepthTexture &lt;span style="color:#f92672">=&lt;/span> csmData.m_depthTexture;
+pShader&lt;span style="color:#f92672">-&amp;gt;&lt;/span>BindTexture(SAMPLER_CASCADED_SHADOW, pCascadedDepthTexture, &lt;span style="color:#ae81ff">0&lt;/span>);
+&lt;span style="color:#75715e">//Far cascade step data
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">const&lt;/span> Vector vecCascadedStep &lt;span style="color:#f92672">=&lt;/span> csmData.vecCascadedStep;
+&lt;span style="color:#66d9ef">float&lt;/span> vCascadedStep[&lt;span style="color:#ae81ff">3&lt;/span>] &lt;span style="color:#f92672">=&lt;/span> { XYZ(vecCascadedStep) };
+pShaderAPI&lt;span style="color:#f92672">-&amp;gt;&lt;/span>SetPixelShaderConstant(initial &lt;span style="color:#f92672">+&lt;/span> &lt;span style="color:#ae81ff">2&lt;/span>, vCascadedStep);
+&lt;span style="color:#75715e">//Biasing
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">float&lt;/span> biasVar[&lt;span style="color:#ae81ff">2&lt;/span>] &lt;span style="color:#f92672">=&lt;/span> { &lt;span style="color:#ae81ff">0&lt;/span>, &lt;span style="color:#ae81ff">0&lt;/span> };
+pShaderAPI&lt;span style="color:#f92672">-&amp;gt;&lt;/span>SetPixelShaderConstant(initial &lt;span style="color:#f92672">+&lt;/span> &lt;span style="color:#ae81ff">3&lt;/span>, biasVar);
+&lt;span style="color:#75715e">// Cascaded World To Texture
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> VMatrix&lt;span style="color:#f92672">*&lt;/span> worldToTexture0 &lt;span style="color:#f92672">=&lt;/span> csmData.m_worldToTextureMatrix;
+pShaderAPI&lt;span style="color:#f92672">-&amp;gt;&lt;/span>SetPixelShaderConstant(initial &lt;span style="color:#f92672">+&lt;/span> &lt;span style="color:#ae81ff">4&lt;/span>, worldToTexture0&lt;span style="color:#f92672">-&amp;gt;&lt;/span>Base(), &lt;span style="color:#ae81ff">4&lt;/span>); &lt;span style="color:#75715e">// up to 44
+&lt;/span>&lt;span style="color:#75715e">&lt;/span>
+&lt;span style="color:#75715e">// Cascaded Filter Size
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">float&lt;/span> csmShadowTweaks[&lt;span style="color:#ae81ff">4&lt;/span>];
+csmShadowTweaks[&lt;span style="color:#ae81ff">0&lt;/span>] &lt;span style="color:#f92672">=&lt;/span> pCascadedDepthTexture&lt;span style="color:#f92672">-&amp;gt;&lt;/span>GetActualWidth() &lt;span style="color:#f92672">*&lt;/span> r_csm_filterscale.GetFloat();
+csmShadowTweaks[&lt;span style="color:#ae81ff">1&lt;/span>] &lt;span style="color:#f92672">=&lt;/span> pCascadedDepthTexture&lt;span style="color:#f92672">-&amp;gt;&lt;/span>GetActualHeight() &lt;span style="color:#f92672">*&lt;/span> r_csm_filterscale.GetFloat();
+csmShadowTweaks[&lt;span style="color:#ae81ff">2&lt;/span>] &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>;
+pShaderAPI&lt;span style="color:#f92672">-&amp;gt;&lt;/span>SetPixelShaderConstant(initial &lt;span style="color:#f92672">+&lt;/span> &lt;span style="color:#ae81ff">8&lt;/span>, csmShadowTweaks);
+}
+&lt;span style="color:#66d9ef">else&lt;/span>
+{
+pShaderAPI&lt;span style="color:#f92672">-&amp;gt;&lt;/span>BindStandardTexture(SAMPLER_CASCADED_SHADOW, TEXTURE_WHITE);
+}
+&lt;span style="color:#66d9ef">if&lt;/span> (pStaticDepthTexture)
+{
+&lt;span style="color:#75715e">// Static Depth
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> pStaticDepthTexture &lt;span style="color:#f92672">=&lt;/span> staticShadowData.m_depthTexture;
+pShader&lt;span style="color:#f92672">-&amp;gt;&lt;/span>BindTexture(SAMPLER_STATIC_SHADOW, pStaticDepthTexture, &lt;span style="color:#ae81ff">0&lt;/span>);
+&lt;span style="color:#75715e">// Static World To Texture
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> VMatrix&lt;span style="color:#f92672">*&lt;/span> worldToTexture1 &lt;span style="color:#f92672">=&lt;/span> staticShadowData.m_worldToTextureMatrix;
+pShaderAPI&lt;span style="color:#f92672">-&amp;gt;&lt;/span>SetPixelShaderConstant(initial &lt;span style="color:#f92672">+&lt;/span> &lt;span style="color:#ae81ff">9&lt;/span>, worldToTexture1&lt;span style="color:#f92672">-&amp;gt;&lt;/span>Base(), &lt;span style="color:#ae81ff">4&lt;/span>); &lt;span style="color:#75715e">// up to 44
+&lt;/span>&lt;span style="color:#75715e">&lt;/span>
+&lt;span style="color:#75715e">// Snapshot Filter Size
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">float&lt;/span> csmStaticShadowTweaks[&lt;span style="color:#ae81ff">4&lt;/span>];
+csmStaticShadowTweaks[&lt;span style="color:#ae81ff">0&lt;/span>] &lt;span style="color:#f92672">=&lt;/span> pStaticDepthTexture&lt;span style="color:#f92672">-&amp;gt;&lt;/span>GetActualWidth() &lt;span style="color:#f92672">*&lt;/span> r_csm_filterscale.GetFloat();
+csmStaticShadowTweaks[&lt;span style="color:#ae81ff">1&lt;/span>] &lt;span style="color:#f92672">=&lt;/span> pStaticDepthTexture&lt;span style="color:#f92672">-&amp;gt;&lt;/span>GetActualHeight() &lt;span style="color:#f92672">*&lt;/span> r_csm_filterscale.GetFloat();
+csmStaticShadowTweaks[&lt;span style="color:#ae81ff">2&lt;/span>] &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>;
+pShaderAPI&lt;span style="color:#f92672">-&amp;gt;&lt;/span>SetPixelShaderConstant(initial &lt;span style="color:#f92672">+&lt;/span> &lt;span style="color:#ae81ff">13&lt;/span>, csmStaticShadowTweaks);
+}
+&lt;span style="color:#66d9ef">else&lt;/span>
+{
+pShaderAPI&lt;span style="color:#f92672">-&amp;gt;&lt;/span>BindStandardTexture(SAMPLER_STATIC_SHADOW, TEXTURE_WHITE);
+}
+pCloudsTexture &lt;span style="color:#f92672">=&lt;/span> AGS_GetRenderState()&lt;span style="color:#f92672">-&amp;gt;&lt;/span>cloudShadow;
+&lt;span style="color:#75715e">// Setting up framebuffer spec map
+&lt;/span>&lt;span style="color:#75715e">&lt;/span> &lt;span style="color:#66d9ef">if&lt;/span> (pCloudsTexture &lt;span style="color:#f92672">&amp;amp;&amp;amp;&lt;/span> AGS_GetRenderState()&lt;span style="color:#f92672">-&amp;gt;&lt;/span>m_bCloudShadowEnabled)
+{
+pShader&lt;span style="color:#f92672">-&amp;gt;&lt;/span>BindTexture(SAMPLER_CLOUDS_SHADOW, pCloudsTexture, &lt;span style="color:#ae81ff">0&lt;/span>);
+}
+&lt;span style="color:#66d9ef">else&lt;/span>
+{
+pShaderAPI&lt;span style="color:#f92672">-&amp;gt;&lt;/span>BindStandardTexture(SAMPLER_CLOUDS_SHADOW, TEXTURE_WHITE);
+}
+&lt;span style="color:#75715e">// Snapshot Depth
+&lt;/span>&lt;span style="color:#75715e">&lt;/span>}
+&lt;/code>&lt;/pre>&lt;/div></content></item></channel></rss>
