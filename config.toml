@@ -9,7 +9,7 @@ paginate = 5
   contentTypeName = "posts"
 
   # ["orange", "blue", "red", "green", "pink"]
-  themeColor = "orange"
+  themeColor = "pink"
 
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 2
@@ -46,7 +46,7 @@ paginate = 5
 [languages]
   [languages.en]
     languageName = "English"
-    title = "Sears's sucky shaders"
+    title = "shadows snippets and shaders"
     subtitle = "a small place for me to talk about my graphics work"
     owner = ""
     keywords = ""
@@ -60,7 +60,7 @@ paginate = 5
     missingBackButtonLabel = "Back to home page"
 
     [languages.en.params.logo]
-      logoText = "Sears's sucky shaders"
+      logoText = "shadows snippets and shaders"
       logoHomeLink = "/"
 
     [languages.en.menu]
