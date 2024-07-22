@@ -1,4 +1,4 @@
-baseURL = "https://andrewbaay.github.io/home/"
+baseURL = "https://sears2424.github.io/home/"
 disqusShortname = ""
 enableGitInfo = true
 enableRobotsTXT = true
@@ -7,10 +7,10 @@ languageCode = "en"
 paginate = 5
 rssLimit = 10
 theme = ["hugo-texify3", "hugo-shortcode-gallery"]
-title = "Andrew Caleb Baay" 
+title = "Sears's Website" 
 
 [author]
-name = "Andrew Caleb Baay"
+name = "Sears2424"
 email = "baayandrew@gmail.com"
 
 [taxonomies]
