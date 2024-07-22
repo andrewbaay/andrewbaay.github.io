@@ -54,7 +54,7 @@ jobs:
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
 
       # Install PostCSS plugins 
-      - run: npm install postcss-cli@latest --force
+      - run: npm i -D postcss postcss-cli autoprefixer --force
       - run: npm install autoprefixer --force
       - run: npm install postcss-import --force
 
