@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Emoji on Andrew Caleb Baay</title>
+    <link>http://localhost:1313/home/tags/emoji/</link>
+    <description>Recent content in Emoji on Andrew Caleb Baay</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>baayandrew@gmail.com (Andrew Caleb Baay)</managingEditor>
+    <webMaster>baayandrew@gmail.com (Andrew Caleb Baay)</webMaster>
+    <lastBuildDate>Tue, 05 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/home/tags/emoji/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emoji Support</title>
+      <link>http://localhost:1313/home/posts/emoji-support/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <author>baayandrew@gmail.com (Andrew Caleb Baay)</author>
+      <guid>http://localhost:1313/home/posts/emoji-support/</guid>
+      <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://gohugo.io/functions/emojify/&#34;&gt;&lt;code&gt;emojify&lt;/code&gt;&lt;/a&gt; function can be called directly in templates or &lt;a href=&#34;https://gohugo.io/templates/shortcode-templates/#inline-shortcodes&#34;&gt;Inline Shortcodes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To enable emoji globally, set &lt;code&gt;enableEmoji&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; in your site&amp;rsquo;s &lt;a href=&#34;https://gohugo.io/getting-started/configuration/&#34;&gt;configuration&lt;/a&gt; and then you can type emoji shorthand codes directly in content files; e.g.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;The &lt;a href=&#34;http://www.emoji-cheat-sheet.com/&#34;&gt;Emoji cheat sheet&lt;/a&gt; is a useful reference for emoji shorthand codes.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;N.B.&lt;/strong&gt; The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;emoji&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;font-family&lt;/span&gt;: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Emoji Support</title>
+      <link>http://localhost:1313/home/posts/gallery-test/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <author>baayandrew@gmail.com (Andrew Caleb Baay)</author>
+      <guid>http://localhost:1313/home/posts/gallery-test/</guid>
+      <description>&lt;h3 id=&#34;monochrome&#34;&gt;Monochrome&lt;/h3&gt;
+&lt;p&gt;hello
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  	
+	
+
+	
+		&lt;script src=&#34;http://localhost:1313/home/home/shortcode-gallery/jquery-3.7.1.min.js&#34;&gt;&lt;/script&gt;
+	
+	
+	
+		&lt;script src=&#34;http://localhost:1313/home/home/shortcode-gallery/lazy/jquery.lazy.min.js&#34;&gt;&lt;/script&gt;
+	
+
+	&lt;script src=&#34;http://localhost:1313/home/home/shortcode-gallery/swipebox/js/jquery.swipebox.min.js&#34;&gt;&lt;/script&gt;
+	&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/home/home/shortcode-gallery/swipebox/css/swipebox.min.css&#34;&gt;
+
+	&lt;script src=&#34;http://localhost:1313/home/home/shortcode-gallery/justified_gallery/jquery.justifiedGallery.min.js&#34;&gt;&lt;/script&gt;
+	&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/home/home/shortcode-gallery/justified_gallery/justifiedGallery.min.css&#34;/&gt;
+
+
+&lt;style&gt;
+	
+
+	
+&lt;/style&gt;
+
+
+
+
+
+&lt;div id=&#34;gallery-87ee408196380680f12b21af7e1295cc-0-wrapper&#34; class=&#34;gallery-wrapper&#34;&gt;
+&lt;div id=&#34;gallery-87ee408196380680f12b21af7e1295cc-0&#34; class=&#34;justified-gallery&#34;&gt;
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+				
+			
+
+
+			
+			
+
+			&lt;div&gt;
+				
+				
+					
+					
+				
+
+				
+				
+					
+					
+				
+
+				&lt;a href=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_yIeVt15gac.jpg&#34; 
+					class=&#34;galleryImg&#34;
+					
+					&gt;
+					&lt;img			
+						width=&#34;267&#34; height=&#34;150&#34;
+
+						
+							
+							style=&#34;filter: blur(25px);&#34;
+							
+								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIABIAIAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/APO3ldVSO8tBKWQEHBVsdufpTJXMc6x2u4gKCwcZAz15oa5VpFIUMF4UNyOtCeZPNtXEZPBK8VmtC3Zluw1Y2sweS3VXUn7w3DPrirs17FegvdXYXA4GCf07Vhk3B1CRRmRyR8xbO7/P1q9FbyAsknlFs8ruwR7elWmZtIp2vPWroZi0QJPUjrVK1q4v3ovqaRXQpWDv/adv8x5lA6&amp;#43;4raRFfVSGUN&amp;#43;9bqPY1iWH/ITt/wDrqP5ityL/AJCp/wCurfyNWzM//9k=&#34;
+							
+							class=&#34;lazy&#34;
+							data-src=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_yIeVt15gac_huff2db58a81ad8237bfc379e139a34505_457144_a1d31a685ebee77c216cccf6c24bd175.jpg&#34;
+						
+
+						
+					&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+				
+			
+
+
+			
+			
+
+			&lt;div&gt;
+				
+				
+					
+					
+				
+
+				
+				
+					
+					
+				
+
+				&lt;a href=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_YCxymXGnfL.jpg&#34; 
+					class=&#34;galleryImg&#34;
+					
+					&gt;
+					&lt;img			
+						width=&#34;267&#34; height=&#34;150&#34;
+
+						
+							
+							style=&#34;filter: blur(25px);&#34;
+							
+								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIABIAIAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/APNxe3QZo2VnHo68jsQc1BeQxS3TR28JULjJHT3P0qcSKJDIIg&amp;#43;4nO&amp;#43;kJlkk/dLtZv7pwT7cVnsXuZ/2SRZCOhBxn/61W4S1uw3jMbcBh0qOe8dbl3Yu0hI&amp;#43;Z2znsauWqTXP&amp;#43;vjWNXHyjHJHqPb3qm7asm1yuSQMZ49Kt2zN52NxwCuBn2FVDVq2/wBf&amp;#43;K/yFHQBms/LCxXgmXBI9MUuhktBJuJOFwM/Wk1v/UH/AK7f0pdC/wBRL/u/1qX8IH//2Q==&#34;
+							
+							class=&#34;lazy&#34;
+							data-src=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_YCxymXGnfL_hu11fc40f3d8a284222e5e8e6cf7b77802_394312_fe2e7213aa1788290e406ecaeb0a7525.jpg&#34;
+						
+
+						
+					&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+				
+			
+
+
+			
+			
+
+			&lt;div&gt;
+				
+				
+					
+					
+				
+
+				
+				
+					
+					
+				
+
+				&lt;a href=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_WBmFHEpPfB.jpg&#34; 
+					class=&#34;galleryImg&#34;
+					
+					&gt;
+					&lt;img			
+						width=&#34;267&#34; height=&#34;150&#34;
+
+						
+							
+							style=&#34;filter: blur(25px);&#34;
+							
+								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIABIAIAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/APOftIkAa5to5T/eK4P5jBrc1W4gjtoGii3NIvCt8oHoB60XGiR2UJ33juQM7UWufvLmaQowfds6Hoa56dWnV1izmSTeg9RJM7FolVj0xSmAYVVGN3TAPNMdZ4ijbgSVBdix4J/wq6ktoCr&amp;#43;RKjKMZWQEfqKqbktlcJRktjXvGPkDk89a5VOb4g8jI4rqbz/AFK/UVyqf8f5&amp;#43;orhwWzKj8JevHYQPhiOvf3p9sco2e0a/wAhUd5/x7v&amp;#43;P8xT7X7j/wDXNf5CvQhujV7n/9k=&#34;
+							
+							class=&#34;lazy&#34;
+							data-src=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_WBmFHEpPfB_hu7f238f9d71cd3755ff09af83a0511e88_367905_7e1f95b0c032956de403f617cf6fc756.jpg&#34;
+						
+
+						
+					&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+
+
+			
+			
+
+			&lt;div&gt;
+				
+				
+					
+					
+				
+
+				
+				
+					
+					
+				
+
+				&lt;a href=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_Rpxsh1ISxA.png&#34; 
+					class=&#34;galleryImg&#34;
+					
+					&gt;
+					&lt;img			
+						width=&#34;274&#34; height=&#34;150&#34;
+
+						
+							
+							style=&#34;filter: blur(25px);&#34;
+							
+								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIABIAIAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/APKbdXJjZPXb0qK8SSKdlcAMDggVe028/s67SdY1fYc7WGQarykSyFiOpzWavcptWIrOOSSZQn3s8DFF&amp;#43;k0VyVlyH6EGrumCFNQgaYfuw4L&amp;#43;4zUevmJ9TmaEARmRiijsCaL&amp;#43;8PoFwAsuAAOO1SqinGVHQdvYVFc/638KmTt9B/JaS2IGuoV1wAPp9KjvlX7IH2jdnrjnrUsn31/z2FR33/HkPr/WjqUj/9k=&#34;
+							
+							class=&#34;lazy&#34;
+							data-src=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_Rpxsh1ISxA_hu442c7d2cc8edb57391a2706772958aab_1139126_697250cbc7c54f699baf265893b09746.png&#34;
+						
+
+						
+					&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+				
+			
+
+
+			
+			
+
+			&lt;div&gt;
+				
+				
+					
+					
+				
+
+				
+				
+					
+					
+				
+
+				&lt;a href=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_RnlNI7s67e.jpg&#34; 
+					class=&#34;galleryImg&#34;
+					
+					&gt;
+					&lt;img			
+						width=&#34;267&#34; height=&#34;150&#34;
+
+						
+							
+							style=&#34;filter: blur(25px);&#34;
+							
+								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIABIAIAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/APIFClwD69alnVI4gqsG5qqTzS7iTzzUW1NlKKi00AXP0pzKoUEHJPbHSrdtp1xcxZQrjqAzYz24qGSCWAkOuPfqKOZN2uChJK7RWPWlpD1paozNFyVMW0kcHp9KjDt5KjccHIPNSS9Yvof5VCP9Un41ijsfxP8Arsf/2Q==&#34;
+							
+							class=&#34;lazy&#34;
+							data-src=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_RnlNI7s67e_huf169f633dffbc8c821bbf7c49beccca9_184303_f7b7fa58d7f9bda0e40f2136d57bf448.jpg&#34;
+						
+
+						
+					&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+
+
+			
+			
+
+			&lt;div&gt;
+				
+				
+					
+					
+				
+
+				
+				
+					
+					
+				
+
+				&lt;a href=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_QCuSZ7J1PB.png&#34; 
+					class=&#34;galleryImg&#34;
+					
+					&gt;
+					&lt;img			
+						width=&#34;237&#34; height=&#34;150&#34;
+
+						
+							
+							style=&#34;filter: blur(25px);&#34;
+							
+								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIABQAIAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/APLzEuOAD7Gonj2AjGPQGrlgIbidY5p0hXuzngVXlJR3VpBjdxtcH&amp;#43;RqLsNLlfy2bGBnP6VKIFVemP60s10AquuSVzuyeualkmtzbRSRShnYfOmMFTTu&amp;#43;wDfIjH8NL5aDtT&amp;#43;1BrK5oVrlVETcVTjA2H61duv9U34VSi&amp;#43;4frWkdhM/9k=&#34;
+							
+							class=&#34;lazy&#34;
+							data-src=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_QCuSZ7J1PB_huf054d96007d3446e9ec372bd8465b806_1079523_7206955cb632bdd5a65fe69742e00102.png&#34;
+						
+
+						
+					&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+				
+			
+
+
+			
+			
+
+			&lt;div&gt;
+				
+				
+					
+					
+				
+
+				
+				
+					
+					
+				
+
+				&lt;a href=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_nxrJ4LBoC6.jpg&#34; 
+					class=&#34;galleryImg&#34;
+					
+					&gt;
+					&lt;img			
+						width=&#34;267&#34; height=&#34;150&#34;
+
+						
+							
+							style=&#34;filter: blur(25px);&#34;
+							
+								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIABIAIAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/APHDjtS5CgDrn9KUIxXeFJUdTjgUgQs&amp;#43;F5pAN4LcDAq9NYeRbQSmWImZdwUMCQMkc&amp;#43;nSmpZhoQQcEnBY5wD6U2S2uIxzH7/QVDd3oyblUVNbMyzDaxH0NQipYP8AXD8at7Dexq2bE2F6pJxuQ4/OoD1X3QZ96ms/&amp;#43;PG9/wB5P61Ceqf7lc6&amp;#43;J/10Mup//9k=&#34;
+							
+							class=&#34;lazy&#34;
+							data-src=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_nxrJ4LBoC6_huff8a7d56fe7d1dcb754173577329419a_203923_9b08f9d43176e1eae051c5e976253cf7.jpg&#34;
+						
+
+						
+					&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+				
+			
+
+
+			
+			
+
+			&lt;div&gt;
+				
+				
+					
+					
+				
+
+				
+				
+					
+					
+				
+
+				&lt;a href=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_n4q8bvN6e3.jpg&#34; 
+					class=&#34;galleryImg&#34;
+					
+					&gt;
+					&lt;img			
+						width=&#34;267&#34; height=&#34;150&#34;
+
+						
+							
+							style=&#34;filter: blur(25px);&#34;
+							
+								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIABIAIAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/APJ3huJgX2OVHU9hVfYxOAM4q3LOztviDqinqvA7df8APemxyRqd2x92c5D4H5CoT7l6EUELrdRb0OCw60/Uk23bYpJbuRn2lmIByvJ44x/Sn3FvI0SXDHCkAZyMnOfx7Gh/Emh6crRXWrUABc5APyn&amp;#43;VVVq1B98/wC638qGKO5XMkgYAOwGR0NKkjgcO3X1pjffH1FC/d/GmI//2Q==&#34;
+							
+							class=&#34;lazy&#34;
+							data-src=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_n4q8bvN6e3_hufa7a73fa1141f3f422a276ba48eb50b3_200436_f056d893a98aa1e213e1f262fef85d1a.jpg&#34;
+						
+
+						
+					&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		
+	
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	if (!(&#34;HSCGjQuery&#34; in window)) {
+		if (!window.jQuery) {
+			throw new Error(&#34;jQuery is not loaded, hugo-shortcode-gallery wont work without it!&#34;);
+		}
+		window.HSCGjQuery = window.jQuery.noConflict(true);
+	}
+
+	
+	
+	
+	
+	
+	;(function($) {
+
+		$( document ).ready(() =&gt; {
+			const gallery = $(&#34;#gallery-87ee408196380680f12b21af7e1295cc-0&#34;);
+			
+
+			
+			let swipeboxInstance = null;
+
+			
+			
+			gallery.on(&#39;jg.complete&#39;, () =&gt; {
+				
+					
+					
+					$(() =&gt; {
+						$(&#39;.lazy&#39;).Lazy({
+							visibleOnly: true,
+							afterLoad: element =&gt; element.css({filter: &#34;none&#34;, transition: &#34;filter 1.0s ease-in-out&#34;})
+						});
+					});
+				
+
+				swipeboxInstance = $(&#39;.galleryImg&#39;).swipebox(
+					$.extend({},
+						{  }
+					)
+				);
+			});
+
+			
+			gallery.justifiedGallery($.extend(
+				{
+					rowHeight : &#34;300&#34;,
+					margins : &#34;5&#34;,
+					border : 0,
+					randomize :  false ,
+					waitThumbnailsLoad : false,
+					lastRow : &#34;justify&#34;,
+					captions : false,
+					
+					
+				},
+				{  }
+			));
+
+			
+			
+		});
+
+	
+	
+	
+	})(window.HSCGjQuery)
+&lt;/script&gt;
+
+bye&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

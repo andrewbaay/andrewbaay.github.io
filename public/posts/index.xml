@@ -1,0 +1,1083 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Andrew Caleb Baay</title>
+    <link>http://localhost:1313/home/posts/</link>
+    <description>Recent content in Posts on Andrew Caleb Baay</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>baayandrew@gmail.com (Andrew Caleb Baay)</managingEditor>
+    <webMaster>baayandrew@gmail.com (Andrew Caleb Baay)</webMaster>
+    <lastBuildDate>Fri, 10 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/home/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mermaid Diagrams</title>
+      <link>http://localhost:1313/home/posts/mermaid-diagrams/</link>
+      <pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate>
+      <author>baayandrew@gmail.com (Andrew Caleb Baay)</author>
+      <guid>http://localhost:1313/home/posts/mermaid-diagrams/</guid>
+      <description>&lt;h2 id=&#34;flowchart&#34;&gt;Flowchart&lt;/h2&gt;
+&lt;div class=&#34;mermaid&#34;&gt;graph LR;
+    A[Hard edge] --&gt;|Link text| B(Round edge)
+    B --&gt; C{Decision}
+    C --&gt;|One| D[Result one]
+    C --&gt;|Two| E[Result two]
+&lt;/div&gt;
+
+&lt;h2 id=&#34;sequence-digram&#34;&gt;Sequence Digram&lt;/h2&gt;
+&lt;div class=&#34;mermaid&#34;&gt;sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&gt;&gt;John: Hello John, how are you?
+    loop Healthcheck
+        John-&gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts &lt;br/&gt;prevail...
+    John--&gt;Alice: Great!
+    John-&gt;Bob: How about you?
+    Bob--&gt;John: Jolly good!
+&lt;/div&gt;
+
+&lt;h2 id=&#34;gantt&#34;&gt;Gantt&lt;/h2&gt;
+&lt;div class=&#34;mermaid&#34;&gt;gantt
+dateFormat  YYYY-MM-DD
+title Adding GANTT diagram to mermaid
+excludes weekdays 2014-01-10
+
+section A section
+Completed task            :done,    des1, 2014-01-06,2014-01-08
+Active task               :active,  des2, 2014-01-09, 3d
+Future task               :         des3, after des2, 5d
+Future task2              :         des4, after des3, 5d
+&lt;/div&gt;
+
+&lt;h2 id=&#34;class-diagram&#34;&gt;Class Diagram&lt;/h2&gt;
+&lt;div class=&#34;mermaid&#34;&gt;classDiagram
+    Animal &lt;|-- Duck
+    Animal &lt;|-- Fish
+    Animal &lt;|-- Zebra
+    Animal : +int age
+    Animal : +String gender
+    Animal: +isMammal()
+    Animal: +mate()
+    class Duck{
+        +String beakColor
+        +swim()
+        +quack()
+    }
+    class Fish{
+        -int sizeInFeet
+        -canEat()
+    }
+    class Zebra{
+        +bool is_wild
+        +run()
+    }
+&lt;/div&gt;
+
+&lt;h2 id=&#34;state-diagram&#34;&gt;State Diagram&lt;/h2&gt;
+&lt;div class=&#34;mermaid&#34;&gt;stateDiagram-v2
+    [*] --&gt; Still
+    Still --&gt; [*]
+    Still --&gt; Moving
+    Moving --&gt; Still
+    Moving --&gt; Crash
+    Crash --&gt; [*]
+&lt;/div&gt;
+
+&lt;h2 id=&#34;git-graph&#34;&gt;Git Graph&lt;/h2&gt;
+&lt;div class=&#34;mermaid&#34;&gt;gitGraph
+    commit
+    commit
+    branch develop
+    checkout develop
+    commit
+    commit
+    checkout main
+    merge develop
+    commit
+    commit
+&lt;/div&gt;
+
+&lt;h2 id=&#34;entity-relationship-diagram&#34;&gt;Entity Relationship Diagram&lt;/h2&gt;
+&lt;div class=&#34;mermaid&#34;&gt;erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+&lt;/div&gt;
+
+&lt;h2 id=&#34;user-journey&#34;&gt;User Journey&lt;/h2&gt;
+&lt;div class=&#34;mermaid&#34;&gt;journey
+    title My working day
+    section Go to work
+      Make tea: 5: Me
+      Go upstairs: 3: Me
+      Do work: 1: Me, Cat
+    section Go home
+      Go downstairs: 5: Me
+      Sit down: 5: Me
+&lt;/div&gt;
+
+&lt;h2 id=&#34;pie-chart&#34;&gt;Pie Chart&lt;/h2&gt;
+&lt;div class=&#34;mermaid&#34;&gt;pie
+    &#34;Dogs&#34; : 386
+    &#34;Cats&#34; : 85
+    &#34;Rats&#34; : 15
+&lt;/div&gt;
+
+&lt;h2 id=&#34;requirement-diagram&#34;&gt;Requirement Diagram&lt;/h2&gt;
+&lt;div class=&#34;mermaid&#34;&gt;requirementDiagram
+
+requirement test_req {
+id: 1
+text: the test text.
+risk: high
+verifymethod: test
+}
+
+element test_entity {
+type: simulation
+}
+
+test_entity - satisfies -&gt; test_req
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>http://localhost:1313/home/posts/markdown-syntax/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <author>baayandrew@gmail.com (Andrew Caleb Baay)</author>
+      <guid>http://localhost:1313/home/posts/markdown-syntax/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
+&lt;h2 id=&#34;headings&#34;&gt;Headings&lt;/h2&gt;
+&lt;p&gt;The following HTML &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt;—&lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; elements represent five levels of section headings. &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; is for Title. &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt; is the highest section level while &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; is the lowest. With &lt;code&gt;numberedSubtitles&lt;/code&gt; param enabled, items will be numbered&lt;/p&gt;
+&lt;h3 id=&#34;h3&#34;&gt;H3&lt;/h3&gt;
+&lt;h3 id=&#34;h3-1&#34;&gt;H3&lt;/h3&gt;
+&lt;h4 id=&#34;h4&#34;&gt;H4&lt;/h4&gt;
+&lt;h5 id=&#34;h5&#34;&gt;H5&lt;/h5&gt;
+&lt;h5 id=&#34;h5-1&#34;&gt;H5&lt;/h5&gt;
+&lt;h6 id=&#34;h6&#34;&gt;H6&lt;/h6&gt;
+&lt;h3 id=&#34;h3-2&#34;&gt;H3&lt;/h3&gt;
+&lt;h3 id=&#34;h3-3&#34;&gt;H3&lt;/h3&gt;
+&lt;h4 id=&#34;h4-1&#34;&gt;H4&lt;/h4&gt;
+&lt;h4 id=&#34;h4-2&#34;&gt;H4&lt;/h4&gt;
+&lt;h2 id=&#34;paragraph&#34;&gt;Paragraph&lt;/h2&gt;
+&lt;p&gt;Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.&lt;/p&gt;
+&lt;p&gt;Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.&lt;/p&gt;
+&lt;h2 id=&#34;blockquotes&#34;&gt;Blockquotes&lt;/h2&gt;
+&lt;p&gt;The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a &lt;code&gt;footer&lt;/code&gt; or &lt;code&gt;cite&lt;/code&gt; element, and optionally with in-line changes such as annotations and abbreviations.&lt;/p&gt;
+&lt;h3 id=&#34;blockquote-without-attribution&#34;&gt;Blockquote without attribution&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+&lt;strong&gt;Note&lt;/strong&gt; that you can use &lt;em&gt;Markdown syntax&lt;/em&gt; within a blockquote.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt; that you can put a blockquote inside a blockquote&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;blockquote-with-attribution&#34;&gt;Blockquote with attribution&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Don&amp;rsquo;t communicate by sharing memory, share memory by communicating.&lt;!-- raw HTML omitted --&gt;
+— Rob Pike&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;tables&#34;&gt;Tables&lt;/h2&gt;
+&lt;p&gt;Tables aren&amp;rsquo;t part of the core Markdown spec, but Hugo supports them out-of-the-box.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Age&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Bob&lt;/td&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Alice&lt;/td&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;inline-markdown-within-tables&#34;&gt;Inline Markdown within tables&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Italics&lt;/th&gt;
+&lt;th&gt;Bold&lt;/th&gt;
+&lt;th&gt;Code&lt;/th&gt;
+&lt;th&gt;Strikethrough&lt;/th&gt;
+&lt;th&gt;Underline&lt;/th&gt;
+&lt;th&gt;Highlight&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;italics&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;bold&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;code&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;del&gt;strikethrough&lt;/del&gt;&lt;/td&gt;
+&lt;td&gt;&lt;!-- raw HTML omitted --&gt;underline&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td&gt;&lt;!-- raw HTML omitted --&gt;highlight&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;code-blocks&#34;&gt;Code Blocks&lt;/h2&gt;
+&lt;h3 id=&#34;code-block-with-backticks&#34;&gt;Code block with backticks&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;lang&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;meta&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;charset&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;Example HTML5 Document&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;Test&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;code-block-indented-with-four-spaces&#34;&gt;Code block indented with four spaces&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!doctype html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+  &amp;lt;title&amp;gt;Example HTML5 Document&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;p&amp;gt;Test&amp;lt;/p&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;code-block-with-hugos-internal-highlight-shortcode&#34;&gt;Code block with Hugo&amp;rsquo;s internal highlight shortcode&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;lang&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;meta&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;charset&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;Example HTML5 Document&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;Test&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&#34;list-types&#34;&gt;List Types&lt;/h2&gt;
+&lt;h3 id=&#34;ordered-list&#34;&gt;Ordered List&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Item 1
+&lt;ol&gt;
+&lt;li&gt;Sub-item 1.1&lt;/li&gt;
+&lt;li&gt;Sub-item 1.2&lt;/li&gt;
+&lt;li&gt;Sub-item 1.3&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Item 2&lt;/li&gt;
+&lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;unordered-list&#34;&gt;Unordered List&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fruit
+&lt;ul&gt;
+&lt;li&gt;Apple&lt;/li&gt;
+&lt;li&gt;Orange&lt;/li&gt;
+&lt;li&gt;Banana&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Dairy
+&lt;ul&gt;
+&lt;li&gt;Milk&lt;/li&gt;
+&lt;li&gt;Cheese&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;checklist&#34;&gt;Checklist&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Item 1&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Item 2
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Sub-item 2.1&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Sub-item 2.2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Item 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;definition-list&#34;&gt;Definition List&lt;/h3&gt;
+&lt;dl&gt;
+&lt;dt&gt;First Term&lt;/dt&gt;
+&lt;dd&gt;This is the definition of the first term.&lt;/dd&gt;
+&lt;dt&gt;Second Term&lt;/dt&gt;
+&lt;dd&gt;This is one definition of the second term.&lt;/dd&gt;
+&lt;dd&gt;This is another definition of the second term.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h2 id=&#34;symbols&#34;&gt;Symbols&lt;/h2&gt;
+&lt;p&gt;You can use the HTML entity for whatever symbol you want to use. For example, if you want to display the copyright sign (©), you can copy and paste the HTML entity for copyright &lt;code&gt;(&amp;amp;copy;)&lt;/code&gt; into your Markdown document.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Copyright (©) — &amp;amp;copy;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Registered trademark (®) — &amp;amp;reg;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Trademark (™) — &amp;amp;trade;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Euro (€) — &amp;amp;euro;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Left arrow (←) — &amp;amp;larr;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Up arrow (↑) — &amp;amp;uarr;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Right arrow (→) — &amp;amp;rarr;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Down arrow (↓) — &amp;amp;darr;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Degree (°) — &amp;amp;#176;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Pi (π) — &amp;amp;#960;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For a complete list of available HTML entities, refer to Wikipedia’s page on &lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references&#34;&gt;HTML entities&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;other-elements--abbr-sub-sup-kbd-mark&#34;&gt;Other Elements — abbr, sub, sup, kbd, mark&lt;/h2&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;GIF&lt;!-- raw HTML omitted --&gt; is a bitmap image format.&lt;/p&gt;
+&lt;p&gt;H&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;O&lt;/p&gt;
+&lt;p&gt;X&lt;!-- raw HTML omitted --&gt;n&lt;!-- raw HTML omitted --&gt; + Y&lt;!-- raw HTML omitted --&gt;n&lt;!-- raw HTML omitted --&gt; = Z&lt;!-- raw HTML omitted --&gt;n&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;Press &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;CTRL&lt;!-- raw HTML omitted --&gt;+&lt;!-- raw HTML omitted --&gt;ALT&lt;!-- raw HTML omitted --&gt;+&lt;!-- raw HTML omitted --&gt;Delete&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; to end the session.&lt;/p&gt;
+&lt;p&gt;Most &lt;!-- raw HTML omitted --&gt;salamanders&lt;!-- raw HTML omitted --&gt; are nocturnal, and hunt for insects, worms, and other small creatures.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;The above quote is excerpted from Rob Pike&amp;rsquo;s &lt;a href=&#34;https://www.youtube.com/watch?v=PAAkCSZUG1c&#34;&gt;talk&lt;/a&gt; during Gopherfest, November 18, 2015.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Rich Content</title>
+      <link>http://localhost:1313/home/posts/rich-content/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <author>baayandrew@gmail.com (Andrew Caleb Baay)</author>
+      <guid>http://localhost:1313/home/posts/rich-content/</guid>
+      <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;youtube-privacy-enhanced-shortcode&#34;&gt;YouTube Privacy Enhanced Shortcode&lt;/h2&gt;
+
+
+    
+    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/ZJthWmvUzzc?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;twitter-simple-shortcode&#34;&gt;Twitter Simple Shortcode&lt;/h2&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Owl bet you&amp;#39;ll lose this staring contest 🦉 &lt;a href=&#34;https://t.co/eJh4f2zncC&#34;&gt;pic.twitter.com/eJh4f2zncC&lt;/a&gt;&lt;/p&gt;&amp;mdash; San Diego Zoo Wildlife Alliance (@sandiegozoo) &lt;a href=&#34;https://twitter.com/sandiegozoo/status/1453110110599868418?ref_src=twsrc%5Etfw&#34;&gt;October 26, 2021&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;vimeo-simple-shortcode&#34;&gt;Vimeo Simple Shortcode&lt;/h2&gt;
+&lt;style&gt;
+.__h_video {
+   position: relative;
+   padding-bottom: 56.23%;
+   height: 0;
+   overflow: hidden;
+   width: 100%;
+   background: #000;
+}
+.__h_video img {
+   width: 100%;
+   height: auto;
+   color: #000;
+}
+.__h_video .play {
+   height: 72px;
+   width: 72px;
+   left: 50%;
+   top: 50%;
+   margin-left: -36px;
+   margin-top: -36px;
+   position: absolute;
+   cursor: pointer;
+}
+&lt;/style&gt;&lt;div class=&#34;s_video_simple __h_video&#34;&gt;
+          &lt;a href=&#34;https://vimeo.com/4.8912912e&amp;#43;07&#34; rel=&#34;noopener&#34; target=&#34;_blank&#34;&gt;
+            &lt;img src=&#34;https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640&#34; srcset=&#34;https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640 1x, https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640 2x&#34; alt=&#34;Sing Jan Swing - Kinetic Type&#34;&gt;
+            &lt;div class=&#34;play&#34;&gt;
+              &lt;svg version=&#34;1&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 61 61&#34;&gt;&lt;circle cx=&#34;30.5&#34; cy=&#34;30.5&#34; r=&#34;30.5&#34; opacity=&#34;.8&#34; fill=&#34;#000&#34;&gt;&lt;/circle&gt;&lt;path d=&#34;M25.3 19.2c-2.1-1.2-3.8-.2-3.8 2.2v18.1c0 2.4 1.7 3.4 3.8 2.2l16.6-9.1c2.1-1.2 2.1-3.2 0-4.4l-16.6-9z&#34; fill=&#34;#fff&#34;&gt;&lt;/path&gt;&lt;/svg&gt;
+            &lt;/div&gt;
+          &lt;/a&gt;
+        &lt;/div&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;mermaid&#34;&gt;Mermaid&lt;/h2&gt;
+&lt;div class=&#34;mermaid&#34;&gt;sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&gt;&gt;John: Hello John, how are you?
+    loop Healthcheck
+        John-&gt;&gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts &lt;br/&gt;prevail!
+    John--&gt;&gt;Alice: Great!
+    John-&gt;&gt;Bob: How about you?
+    Bob--&gt;&gt;John: Jolly good!
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Placeholder Text</title>
+      <link>http://localhost:1313/home/posts/placeholder-text/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      <author>baayandrew@gmail.com (Andrew Caleb Baay)</author>
+      <guid>http://localhost:1313/home/posts/placeholder-text/</guid>
+      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;
+&lt;p&gt;Redit teque digerit hominumque toris verebor lumina non cervice subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc caluere tempus inhospita parcite confusaque translucet patri vestro qui optatis lumine cognoscere flos nubis! Fronde ipsamque patulos Dryopen deorum.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Exierant elisi ambit vivere dedere&lt;/li&gt;
+&lt;li&gt;Duce pollice&lt;/li&gt;
+&lt;li&gt;Eris modo&lt;/li&gt;
+&lt;li&gt;Spargitque ferrea quos palude&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Rursus nulli murmur; hastile inridet ut ab gravi sententia! Nomine potitus silentia flumen, sustinet placuit petis in dilapsa erat sunt. Atria tractus malis.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Comas hunc haec pietate fetum procerum dixit&lt;/li&gt;
+&lt;li&gt;Post torum vates letum Tiresia&lt;/li&gt;
+&lt;li&gt;Flumen querellas&lt;/li&gt;
+&lt;li&gt;Arcanaque montibus omnes&lt;/li&gt;
+&lt;li&gt;Quidem et&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;vagus-elidunt&#34;&gt;Vagus elidunt&lt;/h2&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Canons_of_page_construction#Van_de_Graaf_canon&#34;&gt;The Van de Graaf Canon&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;mane-refeci-capiebant-unda-mulcebat&#34;&gt;Mane refeci capiebant unda mulcebat&lt;/h3&gt;
+&lt;p&gt;Victa caducifer, malo vulnere contra dicere aurato, ludit regale, voca! Retorsit colit est profanae esse virescere furit nec; iaculi matertera et visa est, viribus. Divesque creatis, tecta novat collumque vulnus est, parvas. &lt;strong&gt;Faces illo pepulere&lt;/strong&gt; tempus adest. Tendit flamma, ab opes virum sustinet, sidus sequendo urbis.&lt;/p&gt;
+&lt;p&gt;Iubar proles corpore raptos vero auctor imperium; sed et huic: manus caeli Lelegas tu lux. Verbis obstitit intus oblectamina fixis linguisque ausus sperare Echionides cornuaque tenent clausit possit. Omnia putatur. Praeteritae refert ausus; ferebant e primus lora nutat, vici quae mea ipse. Et iter nil spectatae vulnus haerentia iuste et exercebat, sui et.&lt;/p&gt;
+&lt;p&gt;Eurytus Hector, materna ipsumque ut Politen, nec, nate, ignari, vernum cohaesit sequitur. Vel &lt;strong&gt;mitis temploque&lt;/strong&gt; vocatus, inque alis, &lt;em&gt;oculos nomen&lt;/em&gt; non silvis corpore coniunx ne displicet illa. Crescunt non unus, vidit visa quantum inmiti flumina mortis facto sic: undique a alios vincula sunt iactata abdita! Suspenderat ego fuit tendit: luna, ante urbem Propoetides &lt;strong&gt;parte&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Math Typesetting</title>
+      <link>http://localhost:1313/home/posts/math-typesetting/</link>
+      <pubDate>Fri, 08 Feb 2019 00:00:00 +0000</pubDate>
+      <author>baayandrew@gmail.com (Andrew Caleb Baay)</author>
+      <guid>http://localhost:1313/home/posts/math-typesetting/</guid>
+      <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;
+&lt;p&gt;In this example we will be using &lt;a href=&#34;https://katex.org/&#34;&gt;$\KaTeX$&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a partial under &lt;code&gt;/layouts/partials/math.html&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Within this partial reference the &lt;a href=&#34;https://katex.org/docs/autorender.html&#34;&gt;Auto-render Extension&lt;/a&gt; or host these scripts locally.&lt;/li&gt;
+&lt;li&gt;Include the partial in your templates like so:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; or .Params.math .Site.Params.math &lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt; partial &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;math.html&amp;#34;&lt;/span&gt; . &lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt; end &lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;To enable $\KaTeX$ globally set the parameter &lt;code&gt;math&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; in a project&amp;rsquo;s configuration&lt;/li&gt;
+&lt;li&gt;To enable $\KaTeX$ on a per page basis include the parameter &lt;code&gt;math: true&lt;/code&gt; in content files&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Use the online reference of &lt;a href=&#34;https://katex.org/docs/supported.html&#34;&gt;Supported $\TeX$ Functions&lt;/a&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Block math:
+$$
+\mathcal L_{\mathcal T}(\vec{\lambda})
+= \sum_{(\mathbf{x},\mathbf{s})\in \mathcal T}
+\log P(\mathbf{s}\mid\mathbf{x}) - \sum_{i=1}^m
+\frac{\lambda_i^2}{2\sigma^2}
+$$&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Emoji Support</title>
+      <link>http://localhost:1313/home/posts/emoji-support/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <author>baayandrew@gmail.com (Andrew Caleb Baay)</author>
+      <guid>http://localhost:1313/home/posts/emoji-support/</guid>
+      <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;https://gohugo.io/functions/emojify/&#34;&gt;&lt;code&gt;emojify&lt;/code&gt;&lt;/a&gt; function can be called directly in templates or &lt;a href=&#34;https://gohugo.io/templates/shortcode-templates/#inline-shortcodes&#34;&gt;Inline Shortcodes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To enable emoji globally, set &lt;code&gt;enableEmoji&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; in your site&amp;rsquo;s &lt;a href=&#34;https://gohugo.io/getting-started/configuration/&#34;&gt;configuration&lt;/a&gt; and then you can type emoji shorthand codes directly in content files; e.g.&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;The &lt;a href=&#34;http://www.emoji-cheat-sheet.com/&#34;&gt;Emoji cheat sheet&lt;/a&gt; is a useful reference for emoji shorthand codes.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;N.B.&lt;/strong&gt; The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;emoji&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;font-family&lt;/span&gt;: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Emoji Support</title>
+      <link>http://localhost:1313/home/posts/gallery-test/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      <author>baayandrew@gmail.com (Andrew Caleb Baay)</author>
+      <guid>http://localhost:1313/home/posts/gallery-test/</guid>
+      <description>&lt;h3 id=&#34;monochrome&#34;&gt;Monochrome&lt;/h3&gt;
+&lt;p&gt;hello
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  	
+	
+
+	
+		&lt;script src=&#34;http://localhost:1313/home/home/shortcode-gallery/jquery-3.7.1.min.js&#34;&gt;&lt;/script&gt;
+	
+	
+	
+		&lt;script src=&#34;http://localhost:1313/home/home/shortcode-gallery/lazy/jquery.lazy.min.js&#34;&gt;&lt;/script&gt;
+	
+
+	&lt;script src=&#34;http://localhost:1313/home/home/shortcode-gallery/swipebox/js/jquery.swipebox.min.js&#34;&gt;&lt;/script&gt;
+	&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/home/home/shortcode-gallery/swipebox/css/swipebox.min.css&#34;&gt;
+
+	&lt;script src=&#34;http://localhost:1313/home/home/shortcode-gallery/justified_gallery/jquery.justifiedGallery.min.js&#34;&gt;&lt;/script&gt;
+	&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/home/home/shortcode-gallery/justified_gallery/justifiedGallery.min.css&#34;/&gt;
+
+
+&lt;style&gt;
+	
+
+	
+&lt;/style&gt;
+
+
+
+
+
+&lt;div id=&#34;gallery-87ee408196380680f12b21af7e1295cc-0-wrapper&#34; class=&#34;gallery-wrapper&#34;&gt;
+&lt;div id=&#34;gallery-87ee408196380680f12b21af7e1295cc-0&#34; class=&#34;justified-gallery&#34;&gt;
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+				
+			
+
+
+			
+			
+
+			&lt;div&gt;
+				
+				
+					
+					
+				
+
+				
+				
+					
+					
+				
+
+				&lt;a href=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_yIeVt15gac.jpg&#34; 
+					class=&#34;galleryImg&#34;
+					
+					&gt;
+					&lt;img			
+						width=&#34;267&#34; height=&#34;150&#34;
+
+						
+							
+							style=&#34;filter: blur(25px);&#34;
+							
+								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIABIAIAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/APO3ldVSO8tBKWQEHBVsdufpTJXMc6x2u4gKCwcZAz15oa5VpFIUMF4UNyOtCeZPNtXEZPBK8VmtC3Zluw1Y2sweS3VXUn7w3DPrirs17FegvdXYXA4GCf07Vhk3B1CRRmRyR8xbO7/P1q9FbyAsknlFs8ruwR7elWmZtIp2vPWroZi0QJPUjrVK1q4v3ovqaRXQpWDv/adv8x5lA6&amp;#43;4raRFfVSGUN&amp;#43;9bqPY1iWH/ITt/wDrqP5ityL/AJCp/wCurfyNWzM//9k=&#34;
+							
+							class=&#34;lazy&#34;
+							data-src=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_yIeVt15gac_huff2db58a81ad8237bfc379e139a34505_457144_a1d31a685ebee77c216cccf6c24bd175.jpg&#34;
+						
+
+						
+					&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+				
+			
+
+
+			
+			
+
+			&lt;div&gt;
+				
+				
+					
+					
+				
+
+				
+				
+					
+					
+				
+
+				&lt;a href=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_YCxymXGnfL.jpg&#34; 
+					class=&#34;galleryImg&#34;
+					
+					&gt;
+					&lt;img			
+						width=&#34;267&#34; height=&#34;150&#34;
+
+						
+							
+							style=&#34;filter: blur(25px);&#34;
+							
+								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIABIAIAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/APNxe3QZo2VnHo68jsQc1BeQxS3TR28JULjJHT3P0qcSKJDIIg&amp;#43;4nO&amp;#43;kJlkk/dLtZv7pwT7cVnsXuZ/2SRZCOhBxn/61W4S1uw3jMbcBh0qOe8dbl3Yu0hI&amp;#43;Z2znsauWqTXP&amp;#43;vjWNXHyjHJHqPb3qm7asm1yuSQMZ49Kt2zN52NxwCuBn2FVDVq2/wBf&amp;#43;K/yFHQBms/LCxXgmXBI9MUuhktBJuJOFwM/Wk1v/UH/AK7f0pdC/wBRL/u/1qX8IH//2Q==&#34;
+							
+							class=&#34;lazy&#34;
+							data-src=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_YCxymXGnfL_hu11fc40f3d8a284222e5e8e6cf7b77802_394312_fe2e7213aa1788290e406ecaeb0a7525.jpg&#34;
+						
+
+						
+					&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+				
+			
+
+
+			
+			
+
+			&lt;div&gt;
+				
+				
+					
+					
+				
+
+				
+				
+					
+					
+				
+
+				&lt;a href=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_WBmFHEpPfB.jpg&#34; 
+					class=&#34;galleryImg&#34;
+					
+					&gt;
+					&lt;img			
+						width=&#34;267&#34; height=&#34;150&#34;
+
+						
+							
+							style=&#34;filter: blur(25px);&#34;
+							
+								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIABIAIAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/APOftIkAa5to5T/eK4P5jBrc1W4gjtoGii3NIvCt8oHoB60XGiR2UJ33juQM7UWufvLmaQowfds6Hoa56dWnV1izmSTeg9RJM7FolVj0xSmAYVVGN3TAPNMdZ4ijbgSVBdix4J/wq6ktoCr&amp;#43;RKjKMZWQEfqKqbktlcJRktjXvGPkDk89a5VOb4g8jI4rqbz/AFK/UVyqf8f5&amp;#43;orhwWzKj8JevHYQPhiOvf3p9sco2e0a/wAhUd5/x7v&amp;#43;P8xT7X7j/wDXNf5CvQhujV7n/9k=&#34;
+							
+							class=&#34;lazy&#34;
+							data-src=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_WBmFHEpPfB_hu7f238f9d71cd3755ff09af83a0511e88_367905_7e1f95b0c032956de403f617cf6fc756.jpg&#34;
+						
+
+						
+					&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+
+
+			
+			
+
+			&lt;div&gt;
+				
+				
+					
+					
+				
+
+				
+				
+					
+					
+				
+
+				&lt;a href=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_Rpxsh1ISxA.png&#34; 
+					class=&#34;galleryImg&#34;
+					
+					&gt;
+					&lt;img			
+						width=&#34;274&#34; height=&#34;150&#34;
+
+						
+							
+							style=&#34;filter: blur(25px);&#34;
+							
+								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIABIAIAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/APKbdXJjZPXb0qK8SSKdlcAMDggVe028/s67SdY1fYc7WGQarykSyFiOpzWavcptWIrOOSSZQn3s8DFF&amp;#43;k0VyVlyH6EGrumCFNQgaYfuw4L&amp;#43;4zUevmJ9TmaEARmRiijsCaL&amp;#43;8PoFwAsuAAOO1SqinGVHQdvYVFc/638KmTt9B/JaS2IGuoV1wAPp9KjvlX7IH2jdnrjnrUsn31/z2FR33/HkPr/WjqUj/9k=&#34;
+							
+							class=&#34;lazy&#34;
+							data-src=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_Rpxsh1ISxA_hu442c7d2cc8edb57391a2706772958aab_1139126_697250cbc7c54f699baf265893b09746.png&#34;
+						
+
+						
+					&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+				
+			
+
+
+			
+			
+
+			&lt;div&gt;
+				
+				
+					
+					
+				
+
+				
+				
+					
+					
+				
+
+				&lt;a href=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_RnlNI7s67e.jpg&#34; 
+					class=&#34;galleryImg&#34;
+					
+					&gt;
+					&lt;img			
+						width=&#34;267&#34; height=&#34;150&#34;
+
+						
+							
+							style=&#34;filter: blur(25px);&#34;
+							
+								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIABIAIAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/APIFClwD69alnVI4gqsG5qqTzS7iTzzUW1NlKKi00AXP0pzKoUEHJPbHSrdtp1xcxZQrjqAzYz24qGSCWAkOuPfqKOZN2uChJK7RWPWlpD1paozNFyVMW0kcHp9KjDt5KjccHIPNSS9Yvof5VCP9Un41ijsfxP8Arsf/2Q==&#34;
+							
+							class=&#34;lazy&#34;
+							data-src=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_RnlNI7s67e_huf169f633dffbc8c821bbf7c49beccca9_184303_f7b7fa58d7f9bda0e40f2136d57bf448.jpg&#34;
+						
+
+						
+					&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+
+
+			
+			
+
+			&lt;div&gt;
+				
+				
+					
+					
+				
+
+				
+				
+					
+					
+				
+
+				&lt;a href=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_QCuSZ7J1PB.png&#34; 
+					class=&#34;galleryImg&#34;
+					
+					&gt;
+					&lt;img			
+						width=&#34;237&#34; height=&#34;150&#34;
+
+						
+							
+							style=&#34;filter: blur(25px);&#34;
+							
+								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIABQAIAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/APLzEuOAD7Gonj2AjGPQGrlgIbidY5p0hXuzngVXlJR3VpBjdxtcH&amp;#43;RqLsNLlfy2bGBnP6VKIFVemP60s10AquuSVzuyeualkmtzbRSRShnYfOmMFTTu&amp;#43;wDfIjH8NL5aDtT&amp;#43;1BrK5oVrlVETcVTjA2H61duv9U34VSi&amp;#43;4frWkdhM/9k=&#34;
+							
+							class=&#34;lazy&#34;
+							data-src=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_QCuSZ7J1PB_huf054d96007d3446e9ec372bd8465b806_1079523_7206955cb632bdd5a65fe69742e00102.png&#34;
+						
+
+						
+					&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+				
+			
+
+
+			
+			
+
+			&lt;div&gt;
+				
+				
+					
+					
+				
+
+				
+				
+					
+					
+				
+
+				&lt;a href=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_nxrJ4LBoC6.jpg&#34; 
+					class=&#34;galleryImg&#34;
+					
+					&gt;
+					&lt;img			
+						width=&#34;267&#34; height=&#34;150&#34;
+
+						
+							
+							style=&#34;filter: blur(25px);&#34;
+							
+								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIABIAIAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/APHDjtS5CgDrn9KUIxXeFJUdTjgUgQs&amp;#43;F5pAN4LcDAq9NYeRbQSmWImZdwUMCQMkc&amp;#43;nSmpZhoQQcEnBY5wD6U2S2uIxzH7/QVDd3oyblUVNbMyzDaxH0NQipYP8AXD8at7Dexq2bE2F6pJxuQ4/OoD1X3QZ96ms/&amp;#43;PG9/wB5P61Ceqf7lc6&amp;#43;J/10Mup//9k=&#34;
+							
+							class=&#34;lazy&#34;
+							data-src=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_nxrJ4LBoC6_huff8a7d56fe7d1dcb754173577329419a_203923_9b08f9d43176e1eae051c5e976253cf7.jpg&#34;
+						
+
+						
+					&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		
+	
+		
+		
+				
+			
+			
+			
+				
+			
+
+			
+			
+				
+			
+
+
+			
+			
+
+			&lt;div&gt;
+				
+				
+					
+					
+				
+
+				
+				
+					
+					
+				
+
+				&lt;a href=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_n4q8bvN6e3.jpg&#34; 
+					class=&#34;galleryImg&#34;
+					
+					&gt;
+					&lt;img			
+						width=&#34;267&#34; height=&#34;150&#34;
+
+						
+							
+							style=&#34;filter: blur(25px);&#34;
+							
+								src=&#34;data:image/jpeg;base64,/9j/2wCEAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4&amp;#43;JS5ESUM8SDc9PjsBCgsLDg0OHBAQHDsoIig7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O//AABEIABIAIAMBIgACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5&amp;#43;gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4&amp;#43;Tl5ufo6ery8/T19vf4&amp;#43;fr/2gAMAwEAAhEDEQA/APJ3huJgX2OVHU9hVfYxOAM4q3LOztviDqinqvA7df8APemxyRqd2x92c5D4H5CoT7l6EUELrdRb0OCw60/Uk23bYpJbuRn2lmIByvJ44x/Sn3FvI0SXDHCkAZyMnOfx7Gh/Emh6crRXWrUABc5APyn&amp;#43;VVVq1B98/wC638qGKO5XMkgYAOwGR0NKkjgcO3X1pjffH1FC/d/GmI//2Q==&#34;
+							
+							class=&#34;lazy&#34;
+							data-src=&#34;http://localhost:1313/home/home/posts/gallery-test/images/obm_win64_n4q8bvN6e3_hufa7a73fa1141f3f422a276ba48eb50b3_200436_f056d893a98aa1e213e1f262fef85d1a.jpg&#34;
+						
+
+						
+					&gt;
+				&lt;/a&gt;
+			&lt;/div&gt;
+		
+	
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+	if (!(&#34;HSCGjQuery&#34; in window)) {
+		if (!window.jQuery) {
+			throw new Error(&#34;jQuery is not loaded, hugo-shortcode-gallery wont work without it!&#34;);
+		}
+		window.HSCGjQuery = window.jQuery.noConflict(true);
+	}
+
+	
+	
+	
+	
+	
+	;(function($) {
+
+		$( document ).ready(() =&gt; {
+			const gallery = $(&#34;#gallery-87ee408196380680f12b21af7e1295cc-0&#34;);
+			
+
+			
+			let swipeboxInstance = null;
+
+			
+			
+			gallery.on(&#39;jg.complete&#39;, () =&gt; {
+				
+					
+					
+					$(() =&gt; {
+						$(&#39;.lazy&#39;).Lazy({
+							visibleOnly: true,
+							afterLoad: element =&gt; element.css({filter: &#34;none&#34;, transition: &#34;filter 1.0s ease-in-out&#34;})
+						});
+					});
+				
+
+				swipeboxInstance = $(&#39;.galleryImg&#39;).swipebox(
+					$.extend({},
+						{  }
+					)
+				);
+			});
+
+			
+			gallery.justifiedGallery($.extend(
+				{
+					rowHeight : &#34;300&#34;,
+					margins : &#34;5&#34;,
+					border : 0,
+					randomize :  false ,
+					waitThumbnailsLoad : false,
+					lastRow : &#34;justify&#34;,
+					captions : false,
+					
+					
+				},
+				{  }
+			));
+
+			
+			
+		});
+
+	
+	
+	
+	})(window.HSCGjQuery)
+&lt;/script&gt;
+
+bye&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

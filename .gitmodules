@@ -1,3 +1,15 @@
-[submodule "themes/terminal"]
-	path = themes/terminal
-	url = https://github.com/panr/hugo-theme-terminal.git
+[submodule "themes/ananke"]
+	path = themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "themes/hugo-texify3"]
+	path = themes/hugo-texify3
+	url = https://github.com/michaelneuper/hugo-texify3.git
+[submodule "themes/hugo-texify3-dupe"]
+	path = themes/hugo-texify3-dupe
+	url = https://github.com/andrewbaay/hugo-texify3.git
+[submodule "themes/hugo-shortcode-gallery"]
+	path = themes/shortcode-gallery
+	url = https://github.com/mfg92/hugo-shortcode-gallery.git
+[submodule "themes/hugo-shortcode-gallery-dupe"]
+	path = themes/hugo-shortcode-gallery-dupe
+	url = https://github.com/andrewbaay/hugo-shortcode-gallery.git
