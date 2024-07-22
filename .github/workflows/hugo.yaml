@@ -40,6 +40,16 @@ jobs:
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb          
       - name: Install Dart Sass
         run: sudo snap install dart-sass
+      # Install Node as this is needed for PostCSS
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      # Install PostCSS plugins (from your package.json)
+      - run: npm install postcss-cli
+      - run: npm install autoprefixer
+      - run: npm install postcss-import
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
