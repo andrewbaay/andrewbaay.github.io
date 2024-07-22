@@ -5,6 +5,7 @@ enableRobotsTXT = true
 hasCJKLanguage = true
 languageCode = "en"
 paginate = 5
+rssLimit = 10
 theme = ["hugo-texify3", "hugo-shortcode-gallery"]
 title = "Andrew Caleb Baay" 
 
@@ -28,7 +29,7 @@ customJS = []
 dateFormat = "2 January 2006"
 emphasisWithDots = true
 toc = true
-rootFontSize = "100%"
+rootFontSize = "95%"
 math = true
 enableDuckDuckGoSearchBox = true
 numberedSubtitles = true
