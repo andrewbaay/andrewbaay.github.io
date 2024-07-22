@@ -54,9 +54,9 @@ jobs:
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
 
       # Install PostCSS plugins 
-      - run: npm install postcss-cli
-      - run: npm install autoprefixer
-      - run: npm install postcss-import
+      - run: npm install postcss-cli --force
+      - run: npm install autoprefixer --force
+      - run: npm install postcss-import --force
 
       - name: Build with Hugo
         env:
