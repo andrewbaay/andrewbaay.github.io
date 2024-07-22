@@ -1,4 +1,4 @@
-## Hi! I am Andrew.
+## Hi! I'm Andrew.
 
 An engine and graphics programmer with a few years experience with the Source Engine. Notable projects I worked on / have contributions are: [Operation Black Mesa](https://store.steampowered.com/app/311810/Operation_Black_Mesa/), [GString](https://store.steampowered.com/app/1224600/G_String/), [Portal Revolution](https://store.steampowered.com/app/601360/Portal_Revolution/), [Portal 2: Community Edition](https://store.steampowered.com/app/440000/Portal_2_Community_Edition/), and [Momentum Mod](https://store.steampowered.com/app/669270/Momentum_Mod/).
 
