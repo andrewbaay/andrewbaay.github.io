@@ -12,7 +12,7 @@ thumbnailResizeOptions="1200x900 q90 Lanczos"
 resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPreview="true" loadJQuery="True">}}
 
 ## Introduction
-
+---
 Hi! I am Andrew, also known as Sears, and I was an Engine Programmer / Technical Artist at Tripmine Studios. I will be discussing and showcasing some of the new features I have been adding to the project over the past 4 years or so, as well as the struggles and benefits to implementing these features.
 
 I have always been interested in how games do their graphics since I was a kid, and would always tinker with skin-mods, and do random stuff on reshade.
@@ -23,8 +23,10 @@ This is a high-level overview of the techniques that are implemented on the D3D9
 
 All techniques presented here are possible on Source's D3D9 Renderer.
 
-## Goals
+**All performance metrics shown in this article are not indicative of final performance of the game, as the game is still WIP.**
 
+## Goals
+---
 To fully realize my vision for the game’s presentation, we have to set some general goals:
 
 1. An overhauled materialsystem shader backend that allows materials to be used anywhere regardless of what's rendered.
@@ -32,7 +34,7 @@ To fully realize my vision for the game’s presentation, we have to set some ge
 3. Optimize Source Engine’s rendering system to cope with the detail and performance normally present in games of today.
 
 ## Starting Out
-
+---
 Starting out on a project as large as OBM is a daunting task, and so i laid my goals for the game right from the start. and while the scope has grown in size, the end goal is the same, it was the goals listed above. To achieve this, i first learned how newer source engine versions handles materials differently from the SDK. the largest difference is the introduction of [4 Way Blends](https://developer.valvesoftware.com/wiki/Lightmapped_4WayBlend). This increased world geometry detail but is only supported on the CS:GO Engine and only for displacements. 
 
 At first, i only ported my test assignments (Lens Flare, Chromatic Aberration, etc) to the new engine, but as i was doing that i was experimenting with how Projected Textures work on the CS:GO Engine.
@@ -46,7 +48,7 @@ resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPr
 As disccused earlier on earlier posts, Projected Texture lighting on the Source Engine are rendered by rendering the models involved twice, once with the normal shading, and one more time with the specific light's shading. This didnt change with the newer versions of Projected Textures. This is the reason i quickly abandoned the idea of improving them and search for alternatives.
 
 ## Deferred?
-
+---
 {{< gallery match="images3/*" sortOrder="desc" rowHeight="100" margins="5" 
 thumbnailResizeOptions="1200x900 q90 Lanczos"
 resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPreview="true" loadJQuery="True">}}
@@ -80,7 +82,9 @@ resizeOptions="200x200 q90 Lanczos" showExif="true" previewType="blur" embedPrev
 
 The yellow diagram is a box solution, it encompasses the light, but loosely so, a triangle / frustum proxy mesh (Orange) more closely resembles how a spot light looks like and fits more, wasting less pixel shader invocations.
 
-## Shadows
+## Lighting Features
+---
+### Shadows
 
 To render shadows for these lights, for spot lights i used typical projected shadowmapping. However, point lights are another beast, since point lights affect all around it, projected methods will not work/will have a lot of distortions, especially on the edges.
 
@@ -106,7 +110,7 @@ All the shadows are merged together in a Shadow Map Atlas to save texture slots 
 thumbnailResizeOptions="1200x900 q90 Lanczos"
 resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPreview="true" loadJQuery="True">}}
 
-## Area Lighting
+### Area Lighting
 
 {{< gallery match="images8/*" sortOrder="desc" rowHeight="100" margins="5" 
 thumbnailResizeOptions="1200x900 q90 Lanczos"
@@ -116,7 +120,7 @@ Real-world lighting doesnt come from a single infinitesimal point, but rather, t
 
 The light shape not only affects the specular reflections, but also the volumetric lighting that the light emits as well.
 
-## Volumetric Lighting
+### Volumetric Lighting
 
 {{< gallery match="images9/*" sortOrder="desc" rowHeight="100" margins="5" 
 thumbnailResizeOptions="1200x900 q90 Lanczos"
@@ -151,7 +155,11 @@ For fog volumetric lighting i did a custom approach: Instead of rendering volume
 
 Using the bounded volume fog idea, instead of raymarching from the eye to the surface, we can now raymarch within this volume, therefore making sure that we only raymarch where its actually needed.
 
-## Viewmodel Shadowing
+The bounded fog also supports a variety of density texture types: A projected texture from the screen, an actual 3D volumetric density texture to define the clouds, or a 2D psuedo volumetric density texture that can be rendered using Blender/Houdini.
+
+The bounded fog also supplies basic height density options as well as color gradient options.
+
+### Viewmodel Shadowing
 
 {{< youtube kNOjQCsh3ec >}}
 
@@ -165,7 +173,7 @@ This tech is made possible by combining 2 shadowing techniques. normal projected
 
 To render the projected shadow, a custom shadowmap view is made pointing from the light position to the viewmodel position. the Origin and the FOV of the view is then adjusted depending on the Viewmodel AABB in worldspace. This results on a shadow that is crisp even if the casting light is far away. Screenspace shadows then fixes the peter panning of the projected shadow. 
 
-## Misc Lighting Features
+### Misc Lighting Features
 
 {{< gallery match="images11/*" sortOrder="desc" rowHeight="100" margins="5" 
 thumbnailResizeOptions="1200x900 q90 Lanczos"
@@ -178,14 +186,14 @@ In order to ground the viewmodels to the world they live in more, I implemented 
 Battery pickups also support this feature, creating shadows on the battery as shown above.
 
 ## Post Processing Stack
-
+---
 In addition to the lighting and shading overhauls, I also implemented a custom post processing stack for OBM. This consists of an `env_post_process` entity and volume that has a material for the specific post process shader that they want to render on that particular area.
 
 {{< youtube eaFsvl3N5JA >}}
 
 This allows for multiple (up to 4, can be configured) post process materials be rendered at the same time.
 
-## Lens Flares
+### Lens Flares
 
 {{< gallery match="images13/*" sortOrder="desc" rowHeight="100" margins="5" 
 thumbnailResizeOptions="1200x900 q90 Lanczos"
@@ -193,7 +201,7 @@ resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPr
 
 I implemented lens flares which can be created at a point defined in space, or from the sun itself. Like volumetric lighting, lens flares are a great way to show a player how bright a light source is. From a design standpoint, lens flares can also be used to guide a player towards an exit in a very dark space, or blind a player when looking at a very bright light source.
 
-## Chromatic Aberration
+### Chromatic Aberration
 
 {{< gallery match="images14/*" sortOrder="desc" rowHeight="100" margins="5" 
 thumbnailResizeOptions="1200x900 q90 Lanczos"
@@ -201,7 +209,7 @@ resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPr
 
 Chromatic aberration is a type of post processing effect that scatters light to create an odd, somewhat otherworldly look. This was a must-have system considering the Xen segments players explore in both Guard Duty and Operation: Black Mesa. The thing with post-processing techniques is you need to think of them like garlic when cooking. A little is good, but too much can ruin the dish. Below you can see a screenshot of how this subtle light-altering effect enhances the scene when you approach a Xen Portal, when combined with color correction.
 
-## Screenspace Reflections 
+### Screenspace Reflections 
 
 {{< gallery match="images15/*" sortOrder="desc" rowHeight="100" margins="5" 
 thumbnailResizeOptions="1200x900 q90 Lanczos"
@@ -209,7 +217,7 @@ resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPr
 
 To complement the cubemap specular reflection, I Implemented screenspace reflection support. Screen space reflections is a technique used to create more accurate, and in some ways a bit more detailed reflections, This works by raymarching the reflection vector of the surface normal against a depth buffer. if it hits the depth buffer, that means that the pixel color on that particular hit is the reflection. This doesnt work as well as Ray-Traced reflection, but looks good enough especially if you have cubemaps as a fallback.
 
-## Bloom
+### Bloom
 
 {{< gallery match="images16/*" sortOrder="desc" rowHeight="100" margins="5" 
 thumbnailResizeOptions="1200x900 q90 Lanczos"

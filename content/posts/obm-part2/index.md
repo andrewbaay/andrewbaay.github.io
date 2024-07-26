@@ -15,11 +15,13 @@ resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPr
 *of5a2 on OBM's Renderer. Featuring Directional Lightmap Specular support.*
 
 ## Introduction
-
+---
 Hi! I am Andrew, also known as Sears, and I was an Engine Programmer / Technical Artist at Tripmine Studios. I will be discussing and showcasing some of the new features I have been adding to the project over the past 4 years or so, as well as the struggles and benefits to implementing these features. 
 
-## Directional Lightmaps
+**All performance metrics shown in this article are not indicative of final performance of the game, as the game is still WIP.**
 
+## Directional Lightmaps
+---
 Half-Life 2's lightmapping system consists of 3 separate colored lightmaps corresponding to bump basis. This system is described in detail on [Valve Source Shading](https://cdn.akamai.steamstatic.com/apps/valve/2004/GDC2004_Half-Life2_Shading.pdf). This allows the bumpmapped surface to react to any directional lighting conditions, because each light's contribution to the hemisphere is averaged out on those three basis directions.
 
 However, this only covers the direct diffuse lighting. Specular is handled by cubemaps only, resulting on a flat look on the material.
@@ -52,7 +54,7 @@ resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPr
 Comparison between directional lightmapped surface vs normal Source Engine bumpmap basis lightmaps. Note the enhanced direct specular reflections on the xenian surface on the left image.
 
 ## Non-Uniform Prop Scaling
-
+---
 {{< gallery match="images5/*" sortOrder="desc" rowHeight="100" margins="5" 
 thumbnailResizeOptions="1200x900 q90 Lanczos"
 resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPreview="true" loadJQuery="True">}}

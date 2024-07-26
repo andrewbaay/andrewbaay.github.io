@@ -12,14 +12,14 @@ thumbnailResizeOptions="1200x900 q90 Lanczos"
 resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPreview="true" loadJQuery="True">}}
 
 ## Introduction
-
+---
 Hi! I am Andrew, also known as Sears, and I was an Engine Programmer / Technical Artist at Tripmine Studios. I will be discussing and showcasing some of the new features I have been adding to the project over the past 4 years or so, as well as the struggles and benefits to implementing these features. If you already read the last part, you might have known already that working on D3D9 is a pain in the ass and limits the creative and performance options that we can have if we are using a newer Graphics API. and so, with inspiration, about 2 years ago I started porting the engine in its entirety to DirectX 11.
 
 **All performance metrics shown in this article are not indicative of final performance of the game, as the game is still WIP.**
 
 
 ## Porting to D3D11
-
+---
 One of the biggest, but most subtle changes I have made to Operation: Black Mesa is the DirectX backend; Source Engine typically runs on DirectX 9; while it worked for the time, nowadays, modern runtime applications heavily benefit from later versions of DirectX, so we have Implemented ShaderAPI to target DirectX 11. This upgrade allows us to use a more modern graphics API to implement newer rendering techniques without resorting to hacks. 
 
 On top of that, we also re-evaluated our shader system which has changed how we compile shaders. We are now able to reduce static combos on generic shaders by using constant buffers, allowing us to iterate on them faster than we would have on DirectX 9. 
@@ -27,7 +27,7 @@ On top of that, we also re-evaluated our shader system which has changed how we 
 This allows us to have a “uber-shader” (a single large shader with various combos to determine the lighting, multitexture, ect) approach to how we render assets on the screen, save for special effects. This has enabled us to have consistent feedback and flexibility on how material parameters work, ensuring that a material parameter applied to a typical model can also be applied to environmental geometry.
 
 ## Why?
-
+---
 Porting to D3D11 is a monumental task, however there are a couple of very valid reasons why porting it is necessary.
 
 1. Performance - The techniques employed to render the graphics on D3D9 are suboptimal and rely on a lot of hacks and assumptions. Reimplementing and Porting them to D3D11 will make them use the standard techniques and would be faster.
@@ -39,7 +39,7 @@ Porting to D3D11 is a monumental task, however there are a couple of very valid 
 4. New Features - New features like compute shaders, instanced rendering, constant buffers, structured buffers, would allow much more flexibility for the shader backends.
 
 ## Starting out
-
+---
 {{< gallery match="images2/*" sortOrder="desc" rowHeight="100" margins="5" 
 thumbnailResizeOptions="1200x900 q90 Lanczos"
 resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPreview="true" loadJQuery="True">}}
@@ -81,14 +81,19 @@ resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPr
 Got basic lighting support for models, at this point i am starting to get the hang of porting shaders, however doing this is so tedious since Source ships with a lot of shaders.
 
 ## Shader Porting
-
+---
 The bulk of the work on porting the engine to a new rendering backend is the Shader Porting. Since D3D11 uses Shader Model 5 and the shaders used in this game was written on Shader Model 3, porting  them over was necessary (IIRC some compatiblity modes exist but i opted to port them properly). New features on D3D11 include Constant Buffers, and it has made enabled some shader parameters to be expressed using it instead of combos, which resulted on reduced combo count.
+
+### Porting Strategy
 
 {{< gallery match="images8/*" sortOrder="desc" rowHeight="100" margins="5" 
 thumbnailResizeOptions="1200x900 q90 Lanczos"
 resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPreview="true" loadJQuery="True">}}
 
 Implemented lightmap lighting, as well as basic 2 way and 4way blend support.
+
+To port all the various surface shaders to the new D3D11 backend, instead of porting them as-is, i ported them into a single uber-shader called `PixelLitGeneric`. This shader is supposed to take the roles away from all the "Generic" Shaders, like `LightmappedGeneric`, `VertexLitGeneric`, and their `phong` counterparts and other custom shaders present, to a single shader that can handle everything. The general idea behind this is that, we want to reduce the distinctions between the different geometry classes (world, props and dynamic objects) however possible. Implementing a shader that can handle rendering for all of them allows the artist to be sure that a shader parameter that works on a certain geometry class works for others. This also allows for a model for example, to have a 4WayBlend shader, or a 4WayBlend parallax occlusion blending, lightmapping, and other combinations of shader parameters that we currently support. Allowing a single shader to handle most of the rendering also ensures parameter's consistency across geometry classes, rendering scenarios, and other edge cases.
+
 
 {{< gallery match="images9/*" sortOrder="desc" rowHeight="100" margins="5" 
 thumbnailResizeOptions="1200x900 q90 Lanczos"
@@ -108,11 +113,10 @@ resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPr
 
 Ported the Deferred Renderer. I modified the G-Buffer layout on this iteration of the renderer to use as little space as possible. Normals are now encoded on Octahedral Compression Mapping. This makes the normals occupy only 2 channels, and then packed together with roughness and metalness. A new buffer is now created to store per-pixel velocity called the Velocity Buffer. this buffer will then be used for either motion blur or DLSS/FSR, if the developer implements it.
 
-## Porting Strategy
 
-To port all the various surface shaders to the new D3D11 backend, instead of porting them as-is, i ported them into a single uber-shader called `PixelLitGeneric`. This shader is supposed to take the roles away from all the "Generic" Shaders, like `LightmappedGeneric`, `VertexLitGeneric`, and their `phong` counterparts and other custom shaders present, to a single shader that can handle everything. The general idea behind this is that, we want to reduce the distinctions between the different geometry classes (world, props and dynamic objects) however possible. Implementing a shader that can handle rendering for all of them allows the artist to be sure that a shader parameter that works on a certain geometry class works for others. This also allows for a model for example, to have a 4WayBlend shader, or a 4WayBlend parallax occlusion blending, lightmapping, and other combinations of shader parameters that we currently support. Allowing a single shader to handle most of the rendering also ensures parameter's consistency across geometry classes, rendering scenarios, and other edge cases.
-
-## Parallax Correction for Models and Brushes
+## Additional Features Included on the D3D11 Port
+---
+### Parallax Correction for Models and Brushes
 {{< gallery match="images12/*" sortOrder="desc" rowHeight="100" margins="5" 
 thumbnailResizeOptions="1200x900 q90 Lanczos"
 resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPreview="true" loadJQuery="True">}}
@@ -121,7 +125,7 @@ resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPr
 
 In addition to brushes supporting Parallax Corrected Cubemaps, I also implemented it for models. This is done to ensure a consistent reflection behavior across geometry classes. The parallax correction also applies to moving models, as shown on the pistol reflection.
 
-## Parallax Occlusion with Blending Modulation
+### Parallax Occlusion with Blending Modulation
 {{< gallery match="images13/*" sortOrder="desc" rowHeight="100" margins="5" 
 thumbnailResizeOptions="1200x900 q90 Lanczos"
 resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPreview="true" loadJQuery="True">}}
@@ -134,14 +138,14 @@ This texture-map reuse is useful for artists to ensure that the blending only ha
 
 POM can also be applied to materials as decals or overlays, so that level designers can have reusable surface details that can be placed anywhere on the map.
 
-## Detail Normal Mapping
+### Detail Normal Mapping
 {{< gallery match="images14/*" sortOrder="desc" rowHeight="100" margins="5" 
 thumbnailResizeOptions="1200x900 q90 Lanczos"
 resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPreview="true" loadJQuery="True">}}
 
 To make our characters and props hold well under scrutiny, we use detail texture normal mapping. This is a new detail blend mode that triggers additive blending between the base normal map, and the detail normal map. It helps our artists convey minute details on our characters, such as blending between the nano-suit, straps, and plastics of the Black Ops Assassin’s clothing. Detail normal mapping is also available for brushes.
 
-## Specular Warping
+### Specular Warping
 {{< gallery match="images15/*" sortOrder="desc" rowHeight="100" margins="5" 
 thumbnailResizeOptions="1200x900 q90 Lanczos"
 resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPreview="true" loadJQuery="True">}}
@@ -150,7 +154,7 @@ In order to express exotic materials in our NPCs, specular warping is used. This
 
 Specular warping is now also supported on brushes up to 4 way blended materials.
 
-## Subsurface Scattering
+### Subsurface Scattering
 {{< gallery match="images16/*" sortOrder="desc" rowHeight="100" margins="5" 
 thumbnailResizeOptions="1200x900 q90 Lanczos"
 resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPreview="true" loadJQuery="True">}}
@@ -158,7 +162,7 @@ resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPr
 In order to express fleshy materials and alien matter, Subsurface Scattering is used. the method used here is a simple preintegrated lightwarp with direction to light source as the X direction, and a thickness map on the Y direction. thickness map may be applied as an alpha of the material texture, set via a flag.
 
 
-## Misc Effects
+### Misc Effects
 {{< gallery match="images17/*" sortOrder="desc" rowHeight="100" margins="5" 
 thumbnailResizeOptions="1200x900 q90 Lanczos"
 resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPreview="true" loadJQuery="True">}}
