@@ -1,6 +1,6 @@
 ---
 author: Andrew Caleb Baay
-title: Implementing Operation Black Mesa's Renderer - Part 1 - Doing what we can on D3D9.
+title: Implementing Operation Black Mesa's Renderer - Part 1 - Doing what we can on D3D9
 date: 2024-07-22
 description: OBM Deep Dive
 categories: ["Programming"]
@@ -10,8 +10,6 @@ tags: ["Source Engine", "Graphics Programming", "Game Engine"]
 {{< gallery match="images1/*" sortOrder="desc" rowHeight="100" margins="5" 
 thumbnailResizeOptions="1200x900 q90 Lanczos"
 resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPreview="true" loadJQuery="True">}}
-
-of5a2.
 
 ## Introduction
 
