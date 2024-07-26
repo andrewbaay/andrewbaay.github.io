@@ -8,6 +8,7 @@ paginate = 5
 rssLimit = 10
 theme = ["hugo-texify3", "hugo-shortcode-gallery"]
 title = "Sears's Website" 
+timeout = 100000
 
 [author]
 name = "Sears2424"
