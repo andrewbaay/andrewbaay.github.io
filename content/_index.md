@@ -1,6 +1,6 @@
 ## Hi! I'm Andrew.
 
-A Software Engineer with interests on Game Engine, Graphics Programming, and Embedded Development with a few years experience with the Source Engine, C, C++, Python, HLSL, GLSL. 
+A Software Engineer with interests on Game Engine, Graphics Programming, and Embedded Software Development with a few years experience with the Source Engine.
 \
 \
 I am also known as Sears2424 on the Source Engine community. I currently contribute to [Strata Source Team.](https://stratasource.org/) 
@@ -13,6 +13,7 @@ Thanks for Visiting!
 ---
 ### [Portal Revolution](https://store.steampowered.com/app/601360/Portal_Revolution/)
 (Released 2024)
+\
 \
 {{< gallery match="images_revo/*" sortOrder="desc" rowHeight="100" margins="5" resizeOptions="900x900 q90 Lanczos" showExif="true" previewType="blur" embedPreview="false" loadJQuery="True">}}
 \
@@ -75,12 +76,12 @@ Operation: Black Mesa features reimaginings of both Half-Life™ Opposing Force 
 Experience the Half-Life™ expansion packs like never before. Operation: Black Mesa features reimaginings of both Half-Life™ Opposing Force and Half-Life™ Blue Shift through two unique campaigns. How will you survive the Black Mesa Incident? It's time to choose. 
 \
 \
-I worked on this game as a rendering and engine programmer, my responsibilities include developing and maintaining engine features and graphics effects, maintaining the RHI for the Source Engine for DX11 and Vulkan targets (DXVK), as well as implementing tools for Level Designers to use.
+I worked on this game as a rendering and engine programmer, my responsibilities include developing and maintaining engine features and graphics effects, maintaining the RHI for the Source Engine for DirectX 11 and Vulkan targets (DXVK), as well as implementing tools for Level Designers to use.
 
 
 ---
 ### Contact
 
-- baayandrew@gmail.com
+- [GitHub](https://github.com/sears2424)
 - Sears2424 on Discord
 ---
