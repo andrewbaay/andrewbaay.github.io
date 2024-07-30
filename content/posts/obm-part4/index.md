@@ -151,3 +151,7 @@ thumbnailResizeOptions="1200x900 q90 Lanczos"
 resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPreview="true" loadJQuery="True">}}
 
 To simulate penumbra, since D3D11's depth is now easily accessible by shaders, PCSS is easier than D3D9. This feature is experimental.
+
+## Ending Thoughts
+---
+The Clustered System provides the lighting system with flexible tools to render lighting on a single unified pipeline on either translucent and opaque surfaces. It also allows a single backend for volumetric, raymarched lighting and can be extended to support Image-Based Lighting (Cubemaps) and Decals aswell.

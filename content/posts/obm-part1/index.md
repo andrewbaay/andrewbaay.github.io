@@ -120,6 +120,8 @@ Real-world lighting doesnt come from a single infinitesimal point, but rather, t
 
 The light shape not only affects the specular reflections, but also the volumetric lighting that the light emits as well.
 
+This is especially useful on indoor-outdoor transitions, large LCD Screen lighting, flourescent bulbs, and other real life light sources that arent point emitters.
+
 ### Volumetric Lighting
 
 {{< gallery match="images9/*" sortOrder="desc" rowHeight="100" margins="5" 
@@ -207,7 +209,9 @@ I implemented lens flares which can be created at a point defined in space, or f
 thumbnailResizeOptions="1200x900 q90 Lanczos"
 resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPreview="true" loadJQuery="True">}}
 
-Chromatic aberration is a type of post processing effect that scatters light to create an odd, somewhat otherworldly look. This was a must-have system considering the Xen segments players explore in both Guard Duty and Operation: Black Mesa. The thing with post-processing techniques is you need to think of them like garlic when cooking. A little is good, but too much can ruin the dish. Below you can see a screenshot of how this subtle light-altering effect enhances the scene when you approach a Xen Portal, when combined with color correction.
+Chromatic aberration is a type of post processing effect that scatters light to create an odd, somewhat otherworldly look. This was a must-have system considering the Xen segments players explore in both Guard Duty and Operation: Black Mesa. Below you can see a screenshot of how this subtle light-altering effect enhances the scene when you approach a Xen Portal, when combined with color correction.
+
+Chromatic aberration is also used on some game scenarios, such as taking damage, falling, and when swimming on water. This improves the feedback loop that we are trying to achieve with the game.
 
 ### Screenspace Reflections 
 
@@ -226,3 +230,8 @@ resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPr
 To properly convey extremely bright specular highlights, or light sources, I implemented a new implementation of bloom to the engine. this works by doing a loop between all the mips of a copy of the framebuffer texture and using a blur pass using the previous mip's output to the next mip. This progressive blurring allows for large bloom while keeping the small but bright pixels defined.
 
 All of the above post process effects can be defined on a material and be used for the `env_post_process` entity.
+
+## Ending Thoughts
+---
+That covers most of the new rendering features that are implemented on the game before the D3D11 port. A lot of these features are possible without engine access surpisingly, and you can get far with it. Have fun!
+

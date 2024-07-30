@@ -65,5 +65,7 @@ In addition to implementing this visually, the static prop collision data has be
 
 Static prop combining will then be supported later for scaled props for optimization purposes.
 
-
+## Ending Thoughts
+---
+Directional Lightmaps and Non-Uniform prop scaling are one of the major features I implemented that actually require full access to the engine as they require physics and map format changes. With this features, we have changed our OBM map version from the default CS:GO one and might not be easily readable by third party tools.
 
