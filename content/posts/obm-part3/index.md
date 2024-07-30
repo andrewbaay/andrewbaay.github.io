@@ -94,12 +94,29 @@ Implemented lightmap lighting, as well as basic 2 way and 4way blend support.
 
 To port all the various surface shaders to the new D3D11 backend, instead of porting them as-is, i ported them into a single uber-shader called `PixelLitGeneric`. This shader is supposed to take the roles away from all the "Generic" Shaders, like `LightmappedGeneric`, `VertexLitGeneric`, and their `phong` counterparts and other custom shaders present, to a single shader that can handle everything. The general idea behind this is that, we want to reduce the distinctions between the different geometry classes (world, props and dynamic objects) however possible. Implementing a shader that can handle rendering for all of them allows the artist to be sure that a shader parameter that works on a certain geometry class works for others. This also allows for a model for example, to have a 4WayBlend shader, or a 4WayBlend parallax occlusion blending, lightmapping, and other combinations of shader parameters that we currently support. Allowing a single shader to handle most of the rendering also ensures parameter's consistency across geometry classes, rendering scenarios, and other edge cases.
 
+### PixelLitGeneric?
+As described above, instead of implementing all the D3D9 shaders as-is, i instead streamlined the material creation process by creating PixelLitGeneric. I added a variety of switches and logic for the master shader ( PixelLitGeneric ) to support a variety of lighting contexts ( unlit, diffuse, specular, etc ), this enables the shader to be used on almost all renderables on the game engine, keeping code maintenance to a minimum instead of maintaining each lighting scenario on a separate file.
 
+At first, pixellitgeneric is just a fallback shader for shader features i havent implemented yet on D3D11, but as time goes on, instead of creating a dedicated shader for it, i just improved PixelLitGeneric to support such effects.
+
+
+### Texture-Sampler Separation
+D3D11 supports up to 128 Textures, but it only supports 16 Samplers. Textures and Samplers are bound together on D3D9, therefore we need a new system to have a one-to-many relationship between Samplers and Textures, to support more Textures.
+
+The way i approached this problem is to have all same-kind textures use the same sampler. For normal rendering this wont have any effect, but on blended textures they do have an effect. For example, the sampler used for `$basetexture` will be the sampler used for `$basetexture2`, `$basetexture3`, and `$basetexture4`. 
+
+I also implemented basic standard samplers S10-S15 for generic samplers like linear, shadowmap, lightmap-specific sampler that is always defined on all shaders.
+
+This way, we have a streamlined approach on textures and which samplers to use for each, and we can scale how many textures can we use per renderable. This number has been raised to 128 textures.
+
+### Depth Passes
 {{< gallery match="images9/*" sortOrder="desc" rowHeight="100" margins="5" 
 thumbnailResizeOptions="1200x900 q90 Lanczos"
 resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPreview="true" loadJQuery="True">}}
 
 Ported CSM and local light shadows support, however at this point the deferred system isnt ported yet. It is interesting to see on a debug view the shadowmaps though. On D3D9, since the shadow maps use a special depth format, you are unable to view this texture on a debug view as color map. On D3D11 it is possible.
+
+### Post Process and Deferred
 
 {{< gallery match="images10/*" sortOrder="desc" rowHeight="100" margins="5" 
 thumbnailResizeOptions="1200x900 q90 Lanczos"
@@ -113,6 +130,14 @@ resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPr
 
 Ported the Deferred Renderer. I modified the G-Buffer layout on this iteration of the renderer to use as little space as possible. Normals are now encoded on Octahedral Compression Mapping. This makes the normals occupy only 2 channels, and then packed together with roughness and metalness. A new buffer is now created to store per-pixel velocity called the Velocity Buffer. this buffer will then be used for either motion blur or DLSS/FSR, if the developer implements it.
 
+### Half-Pixel Offset
+On D3D9, there is a half-pixel offset that is present on all rendering code. On D3D11 this doesnt exist anymore so the top level rendering code has to change to account for this. More information about the Half-Pixel Offset is available [here.](https://aras-p.info/blog/2016/04/08/solving-dx9-half-pixel-offset/)
+
+
+### Instancing
+Since D3D11 supports `DrawIndexedInstanced`, I implemented it to work with the static prop rendering code. This has mixed results but rendering a lot of models dont bog down the system anymore as much as it was on D3D9.
+
+This instancing path is used mainly on shadowmapping pass where there is little material variety and instancing can be retrofitted into the current rendering pipeline more easily.
 
 ## Additional Features Included on the D3D11 Port
 ---
@@ -171,6 +196,20 @@ A variety of special effects had been implemented for certain surfaces like glas
 
 One more effect that is also done is soft edges for materials, this allows certain usage of the shader like a water material, be plausible on a non-water shader.
 
+
+{{< youtube  DfOcQ1YzdA8 >}}
+
+I revisited the velocity buffer and wrote the first implementation that depends on it: a Motion Blur effect. This effect depends on the velocity+direction of the object respective to the screen to determine the blur intensity and direction.
+
+On the video, the lower right G-Buffer is the screenspace velocity information that is used to determine velocities of objects on the scene and apply appropriate motion blur on it.
+
+{{< youtube FtNnHhtY6cI >}}
+
+This per-object motion blur effect also works on a per-bone basis, so it appropriately blurs certain parts of the NPC when it is in motion, like shown on this video.
+
+## Ending Thoughts
+---
 That covers most of the new rendering features that are implemented on the game alongside the D3D11 port. It is a huge undertaking to have done this but i think it is worth it, even just for the stuff i learned along the way.
+
 
 
