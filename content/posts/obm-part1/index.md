@@ -235,3 +235,5 @@ All of the above post process effects can be defined on a material and be used f
 ---
 That covers most of the new rendering features that are implemented on the game before the D3D11 port. A lot of these features are possible without engine access surpisingly, and you can get far with it. Have fun!
 
+You can read the next part of this series [here.](https://sears2424.github.io/posts/obm-part2/)
+

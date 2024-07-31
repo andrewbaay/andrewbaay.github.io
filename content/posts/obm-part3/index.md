@@ -211,5 +211,6 @@ This per-object motion blur effect also works on a per-bone basis, so it appropr
 ---
 That covers most of the new rendering features that are implemented on the game alongside the D3D11 port. It is a huge undertaking to have done this but i think it is worth it, even just for the stuff i learned along the way.
 
+You can read the next part of this series [here.](https://sears2424.github.io/posts/obm-part4/)
 
 

@@ -69,3 +69,4 @@ Static prop combining will then be supported later for scaled props for optimiza
 ---
 Directional Lightmaps and Non-Uniform prop scaling are one of the major features I implemented that actually require full access to the engine as they require physics and map format changes. With this features, we have changed our OBM map version from the default CS:GO one and might not be easily readable by third party tools.
 
+You can read the next part of this series [here.](https://sears2424.github.io/posts/obm-part3/)
