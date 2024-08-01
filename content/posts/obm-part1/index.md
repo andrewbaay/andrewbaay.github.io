@@ -175,6 +175,27 @@ This tech is made possible by combining 2 shadowing techniques. normal projected
 
 To render the projected shadow, a custom shadowmap view is made pointing from the light position to the viewmodel position. the Origin and the FOV of the view is then adjusted depending on the Viewmodel AABB in worldspace. This results on a shadow that is crisp even if the casting light is far away. Screenspace shadows then fixes the peter panning of the projected shadow. 
 
+### Ambient Occlusion using RTT Shadows
+
+Since realistically lighting comes from all surfaces and bounces around, we need a solution for ambient occlusion. Ambient occlusion is the amount of occlusion on every point of the surface that is the average of all self-shadowing happening within the object. It is the tendency that a point or a surface is obscured from the average lighting in an area. Ambient Occlusion is a part of the global illumination algorithm that is responsible for darkening the creases where bounced light has a harder time reaching towards. 
+
+For OBM, we opted for a hybrid solution to solve this problem. I implemented a custom SSAO algorithm as normal, but I also implemented a custom self-shadow AO solution that relies on a shadowmapped render-to-target texture.
+
+Source has [render-to-target texture shadow support](https://developer.valvesoftware.com/wiki/Lighting#Dynamic_shadows) already from the start. [Dynamic RTT shadows](https://developer.valvesoftware.com/wiki/Dynamic_RTT_shadow_angles_in_Source_2007) are then implemented to newer versions of the engine so that the shadows follow the brightest light on the local area. This allows for better dynamic shadowing, but still inadequate for moving lights and other special lighting scenarios.
+
+{{< gallery match="images10-2/*" sortOrder="desc" rowHeight="100" margins="5" 
+thumbnailResizeOptions="1200x900 q90 Lanczos"
+resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPreview="true" loadJQuery="True">}}
+
+To add more depth and ambient occlusion to our characters and to ground them even more to the world, I expanded upon this system so that the shadows can self-shadow on the object casting on it, as shown on the screenshots above. This was done by changing the Render Target format for the shadow atlas `_rt_Shadows` to a color depth format like R16/R32, and then extracting the projection matrix of the render-to-texture, supplying it to the shader, and doing shadow mapping like normal. I also implemented PCSS so that the shadow contact-hardens and gets fuzzy if the shadow is farther away from the model casting it.
+
+{{< gallery match="images10-3/*" sortOrder="desc" rowHeight="100" margins="5" 
+thumbnailResizeOptions="1200x900 q90 Lanczos"
+resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPreview="true" loadJQuery="True">}}
+
+A comparison between default shadows and the enhanced RTT ambient shadow algorithm. the enhanced RTT ambient shadow more accurately catches the shadow to the model and darkens the appropriate pixels. It grounds the NPCs more to the world instead of them feeling like a cut-out from it.
+
+
 ### Misc Lighting Features
 
 {{< gallery match="images11/*" sortOrder="desc" rowHeight="100" margins="5" 
@@ -186,6 +207,14 @@ resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPr
 In order to ground the viewmodels to the world they live in more, I implemented viewmodel inherent lighting. We attach the new lighting system (complete with shadows!) to certain attachment points of the Viewmodel. It reacts and moves depending on the firing state/animation of the viewmodel. Currently supported on the Displacer, Tau, Snark, and other guns.
 
 Battery pickups also support this feature, creating shadows on the battery as shown above.
+
+
+### Deferred Bounced Lighting
+{{< gallery match="images11-2/*" sortOrder="desc" rowHeight="100" margins="5" 
+thumbnailResizeOptions="1200x900 q90 Lanczos"
+resizeOptions="1200x1200 q90 Lanczos" showExif="true" previewType="blur" embedPreview="true" loadJQuery="True">}}
+
+Since realtime lighting doesnt rely on baking, and implementing realtime raytracing tends to be expensive, Deferred lighting normally doesnt have any bounced lighting information in it. To implement bounced lighting for deferred and per-pixel lighting, I added the lights to the VRAD light list. However, instead of rendering the full lighting for each light on each surface, I instead computed the bounced lighting in case of the deferred lights. the intensity of the radiosity can be adjusted, as shown here.
 
 ## Post Processing Stack
 ---

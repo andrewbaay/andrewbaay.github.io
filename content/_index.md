@@ -8,8 +8,13 @@ I am also known as Sears2424 on the Source Engine community. I currently contrib
 Thanks for Visiting!
 
 ---
-##  Projects and Contributions
+## Blog Posts
+---
+- [Implementing Operation Black Mesa's Renderer](https://sears2424.github.io/posts/obm-part1/)
+- [How I learned Graphics Programming on the Source Engine](https://sears2424.github.io/posts/learning-sdk/)
 
+---
+## Projects and Contributions
 ---
 ### [Portal Revolution](https://store.steampowered.com/app/601360/Portal_Revolution/)
 (Released 2024)
@@ -81,7 +86,8 @@ I worked on this game as a rendering and engine programmer, my responsibilities 
 
 ---
 ### Contact
-
+---
 - [GitHub](https://github.com/sears2424)
 - Sears2424 on Discord
+
 ---
