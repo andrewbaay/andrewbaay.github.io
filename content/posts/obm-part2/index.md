@@ -2,7 +2,7 @@
 author: Andrew Caleb Baay
 title: Implementing Operation Black Mesa's Renderer - Part 2 - Lightmaps and Stretched Models
 date: 2024-07-22
-description: OBM Deep Dive
+description: OBM Deep Dive Part 2 - Lightmaps and Stretched Models. This part describes the initial improvements to the lighting system that require engine access.
 categories: ["Programming"]
 tags: ["Source Engine", "Graphics Programming", "Game Engine"]
 math: true

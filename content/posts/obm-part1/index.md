@@ -2,7 +2,7 @@
 author: Andrew Caleb Baay
 title: Implementing Operation Black Mesa's Renderer - Part 1 - Doing what we can on D3D9
 date: 2024-07-22
-description: OBM Deep Dive
+description: OBM Deep Dive Part 1 - DirectX 9. This part describes the rendering features implemented on the original DirectX 9 version and subsequently ported to the DirectX 11 Version.
 categories: ["Programming"]
 tags: ["Source Engine", "Graphics Programming", "Game Engine"]
 ---

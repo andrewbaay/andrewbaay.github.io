@@ -1,3 +1,10 @@
+---
+author: Andrew Caleb Baay
+title: Main Page
+date: 2024-07-22
+description: Sears2424's Github Pages Website and Portfolio
+---
+
 ## Hi! I'm Andrew.
 
 A Software Engineer with interests on Game Engine, Graphics Programming, and Embedded Software Development with a few years experience with the Source Engine.

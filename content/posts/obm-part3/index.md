@@ -2,7 +2,7 @@
 author: Andrew Caleb Baay
 title: Implementing Operation Black Mesa's Renderer - Part 3 - Porting to D3D11
 date: 2024-07-22
-description: OBM Deep Dive
+description: OBM Deep Dive Part 3 - DirectX 11. This part describes the major update to port the rendering backend to DirectX 11.
 categories: ["Programming"]
 tags: ["Source Engine", "Graphics Programming", "Game Engine"]
 ---

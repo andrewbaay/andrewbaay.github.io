@@ -2,7 +2,7 @@
 author: Andrew Caleb Baay
 title: Implementing Operation Black Mesa's Renderer - Part 4 - Clustered Lighting
 date: 2024-07-22
-description: OBM Deep Dive
+description: OBM Deep Dive Part 4 - Clustered Lighting. This part of the series describes the implementation of the new backend to render per pixel lighting on the game.
 categories: ["Programming"]
 tags: ["Source Engine", "Graphics Programming", "Game Engine"]
 ---
