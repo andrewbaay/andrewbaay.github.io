@@ -45,7 +45,7 @@ Slip into the Standard Issue Biosuit as Myo Hyori, a gifted Korean teenage girl 
 My responsibilities in this game include: Developing fixes and performance improvements to the spaceship movement system in the final chapter, fixed the spaceship targeting system, the AI node movement of the enemy AI NPCs, and other fixes, Fixing various general graphical bugs and crashes of the game prior to release, and Finalized gameplay improvements for the game prior to release.
 
 ---
-### [Lost Industry 2](https://store.steampowered.com/app/311810/)
+### [Lost Industry 2](https://www.moddb.com/mods/lostindustry2-mod)
 (Released 2020)
 \
 \
